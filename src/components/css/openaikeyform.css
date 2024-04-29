@@ -1,0 +1,68 @@
+.openai-key-form {
+  width: 600px;
+  min-width: 300px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: auto;
+  margin: 2rem auto; /* This centers the box horizontally */
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Add this line */
+  top: 50%; /* Add this line */
+  left: 50%; /* Add this line */
+  transform: translate(-50%, -50%); /* Add this line */
+}
+
+  
+  .openai-key-form h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  .openai-key-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .openai-key-form label {
+    margin-bottom: 0.5rem;
+    color: #666;
+  }
+  
+  .openai-key-form input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .openai-key-form button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .openai-key-form button:hover {
+    background-color: #4cae4c;
+  }
+  
+  .openai-key-form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .openai-key-form p {
+    color: #28a745;
+    text-align: center;
+  }
+  .buttonSubmit{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  

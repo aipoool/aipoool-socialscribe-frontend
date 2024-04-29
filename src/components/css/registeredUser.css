@@ -1,0 +1,27 @@
+.registered-user-page {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 100px;
+}
+
+.redirect-buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px; /* Adjust as needed */
+    margin: auto;
+}
+
+.redirect-buttons button {
+    padding: 10px 20px; /* Adjust as needed */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px; /* Adjust as needed */
+    border: none;
+    border-radius: 5px; /* Adjust as needed */
+    color: white;
+    background-color: #007BFF; /* Adjust as needed */
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.redirect-buttons button:hover {
+    background-color: #0056b3; /* Adjust as needed */
+}

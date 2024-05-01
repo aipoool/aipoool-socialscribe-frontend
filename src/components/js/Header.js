@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import "../css/header.css";
-import {NavLink} from "react-router-dom"
 import axios from "axios";
 
 
@@ -11,12 +10,18 @@ const Header = () => {
 
   const getUser = async() => {
     try{
-      const response = await axios.get("http://localhost:1997/api/login/success", {withCredentials:true});
-      setUserdata(response.data.User);
+      const response = await axios.get("http://localhost:1997/api/login/success" , 
+    {withCredentials:true});
+    setUserdata(response.data.user);
+    console.log("Response from Header.js : ", response.data.user);
 
       if(response.data.auth){
+        console.log("login success with data: " , response.data);
         localStorage.setItem('userData', JSON.stringify(response.data.User));
         localStorage.setItem('jwt_token', JSON.stringify(response.data.auth));
+      }
+      else {
+        console.log("Error with the Login creds : ", response.data);
       }
  
     }catch(error){
@@ -26,7 +31,7 @@ const Header = () => {
 
   useEffect(()=>{
     getUser()
-  })
+  }, []);
 
 
 

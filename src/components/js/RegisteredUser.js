@@ -1,18 +1,20 @@
 /* global chrome */
 import React, { useEffect } from 'react';
 import '../css/registeredUser.css';
+
 //var Token = localStorage.getItem('accessToken');
 //var Email = localStorage.getItem('email');
 //var Username = localStorage.getItem('username'); 
 var userData = JSON.parse(localStorage.getItem('userData'));
+
 var extensionId = 'dnjmipaneoddchfeamgdabpiomihncii'; 
 
 const RegisteredUser = () => {
-  console.log(userData); 
+  //console.log(userData); 
   
   chrome.runtime.sendMessage(extensionId, 
-    { 
-      userData
+    {
+      userData 
     } 
     , function (response) {
     if (!response.success) {
@@ -29,14 +31,6 @@ const RegisteredUser = () => {
     window.location.href = 'https://twitter.com/';
   };
 
-
-  // useEffect(() => {
-  //   // Set a timeout to redirect the user to LinkedIn after 5 seconds
-  //   const timer = setTimeout(() => {
-  //     window.location.href = 'https://www.linkedin.com';
-  //   }, 2000);
-  //   return () => clearTimeout(timer);
-  // }, []);
 
   return (
     <div className="registered-user-page">

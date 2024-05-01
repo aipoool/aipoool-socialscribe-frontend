@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import OpenAIKeyForm from '../js/OpenAIKeyForm.js';
 
+
 const EnterOpenAIKey = () => {
   const [userdata, setUserdata] = useState({});
   //const userEmail = userdata.email;
@@ -11,8 +12,10 @@ const EnterOpenAIKey = () => {
   
   const fetchSessionData = async() => {
     try{
-      const response = await axios.get("http://localhost:1997/api/login/success", {withCredentials:true});
-      setUserdata(response.data.User);
+      const response = await axios.get("http://localhost:1997/api/login/success" , 
+      {withCredentials:true});
+      setUserdata(response.data.user);
+      console.log("Response from EnterOpenAIKey.js : ", response.data.user);
       
     }catch(error){ 
       console.log("error", error); 
@@ -21,7 +24,7 @@ const EnterOpenAIKey = () => {
 
   useEffect(() => {
     fetchSessionData()
-  }, [])
+  }, []);
 
   return (
     <div>

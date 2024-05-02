@@ -12,6 +12,7 @@ const OpenAIKeyForm = ({ userId }) => {
   const history = useNavigate();
 
   var extensionId = 'dnjmipaneoddchfeamgdabpiomihncii'; 
+  
 
   //console.log(jwt_token);
 
@@ -28,30 +29,25 @@ const OpenAIKeyForm = ({ userId }) => {
     try {
       console.log("User Id: ", userId);
       const response = await axios.post(
-        "http://localhost:1997/api/enter-your-key/success",
+        "http://localhost:1997/auth/enter-your-key/success",
         {
           id: userId,
           openAIKey: openAIKey,
         },
-        {
-          headers: {
-            Authorization: JSON.parse(localStorage.getItem("jwt_token")),
-          },
-        }
       );
       console.log(response.data.id, response.data.openAIKey);
 
-      // Send the jwt token to the extension 
-      chrome.runtime.sendMessage(extensionId, 
-        {
-          jwt_token: JSON.parse(localStorage.getItem("jwt_token")) 
-        } 
-        , function (response) {
-        if (!response.success) {
-          console.log('error sending token', response);
-          return response;
-        }
-      }); 
+      // // Send the jwt token to the extension 
+      // chrome.runtime.sendMessage(extensionId, 
+      //   {
+      //     jwt_token: JSON.parse(localStorage.getItem("jwt_token")) 
+      //   } 
+      //   , function (response) {
+      //   if (!response.success) {
+      //     console.log('error sending token', response);
+      //     return response;
+      //   }
+      // }); 
 
 
       setMessage("Key updated successfully!");

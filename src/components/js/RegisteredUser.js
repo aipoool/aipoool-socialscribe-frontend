@@ -3,9 +3,6 @@ import React, {useEffect, useState} from 'react'
 import '../css/registeredUser.css';
 import axios from 'axios';
 
-//var userData = JSON.parse(localStorage.getItem('userData')); // optional chaining ??
-//var userEmail = userData.email;
-
 var extensionId = 'dnjmipaneoddchfeamgdabpiomihncii'; 
 
 const RegisteredUser = ({isNewUser = true}) => {
@@ -21,8 +18,6 @@ const RegisteredUser = ({isNewUser = true}) => {
     {withCredentials:true});
     setUserdata(response.data.user);
     console.log("login success with data: " , response.data);
-    //localStorage.setItem('userData', JSON.stringify(response.data.user));
-    //localStorage.setItem('jwt_token', JSON.stringify(response.data.auth));
     console.log("Response from Header.js : ", response.data.user);
 
  

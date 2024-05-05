@@ -1,4 +1,3 @@
-/* global chrome */
 
 import React, { useState } from "react";
 import axios from "axios";
@@ -11,10 +10,6 @@ const OpenAIKeyForm = ({ userId }) => {
   const [message, setMessage] = useState("");
   const history = useNavigate();
 
-  var extensionId = 'dnjmipaneoddchfeamgdabpiomihncii'; 
-  
-
-  //console.log(jwt_token);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -36,19 +31,6 @@ const OpenAIKeyForm = ({ userId }) => {
         },
       );
       console.log(response.data.id, response.data.openAIKey);
-
-      // // Send the jwt token to the extension 
-      // chrome.runtime.sendMessage(extensionId, 
-      //   {
-      //     jwt_token: JSON.parse(localStorage.getItem("jwt_token")) 
-      //   } 
-      //   , function (response) {
-      //   if (!response.success) {
-      //     console.log('error sending token', response);
-      //     return response;
-      //   }
-      // }); 
-
 
       setMessage("Key updated successfully!");
       history("/registered");

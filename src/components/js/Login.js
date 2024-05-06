@@ -5,7 +5,7 @@ import "../css/login.css"
 const Login = () => {
 
     const loginwithgoogle = ()=>{
-        window.open("https://aipoool-socialscribe-backend.onrender.com/auth/google/callback","_self")
+        window.open("https://aipoool-socialscribe-backend.vercel.app/auth/google/callback","_self")
     }
 
     return (

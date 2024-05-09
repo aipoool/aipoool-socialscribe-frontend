@@ -129,7 +129,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                             </>
                           ) : (
                             <>
-                              <button onClick={aboutSocialScribe}>About SocialScribe</button>
+                              <button onClick={aboutSocialScribe}>About Us</button>
                               <button onClick={openSettings}>
                                 Open Settings
                               </button>

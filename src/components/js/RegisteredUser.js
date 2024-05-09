@@ -122,9 +122,12 @@ const RegisteredUser = ({ isNewUser = true }) => {
                         <div className="redirect-buttons">
                           {isNewUser ? (
                             <>
+                            <img src="/src/gif/linkedin-gif.gif" alt="LinkedIn Gif" />
                               <button onClick={redirectToLinkedIn}>
                                 Go to LinkedIn
                               </button>
+
+                              <img src="/src/gif/x-gif.gif" alt="X Gif" />
                               <button onClick={redirectToX}>Go to X</button>
                             </>
                           ) : (

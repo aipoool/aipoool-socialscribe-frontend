@@ -119,16 +119,20 @@ const RegisteredUser = ({ isNewUser = true }) => {
                                             <span class="elementor-button-text">Sign in With Google</span>
                                         </span>
                                     </button> */}
-                        <div className="redirect-buttons">
+                        <div className="redirect-buttons" style={{ display: 'flex', justifyContent: 'space-between' }}>
                           {isNewUser ? (
                             <>
+                            <div style={{ margin: '10px' }}>
                             <img src="/src/gif/linkedin-gif.gif" alt="LinkedIn Gif" />
                               <button onClick={redirectToLinkedIn}>
                                 Go to LinkedIn
                               </button>
+                            </div>
 
+                            <div style={{ margin: '10px' }}>
                               <img src="/src/gif/x-gif.gif" alt="X Gif" />
                               <button onClick={redirectToX}>Go to X</button>
+                            </div>
                             </>
                           ) : (
                             <>

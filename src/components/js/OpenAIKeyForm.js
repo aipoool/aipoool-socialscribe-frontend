@@ -22,11 +22,12 @@ const OpenAIKeyForm = ({ userId }) => {
     try {
       console.log("User Id: ", userId);
       const response = await axios.post(
-        "https://aipoool-socialscribe-backend.vercel.app/auth/enter-your-key/success",
+        "https://aipoool-socialscribe-backend.onrender.com/auth/enter-your-key/success",
         {
           id: userId,
           openAIKey: openAIKey,
-        }
+        }, 
+        { withCredentials: true }
       );
       console.log(response.data.id, response.data.openAIKey);
 

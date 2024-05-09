@@ -176,7 +176,7 @@ const Header = () => {
                           <a
                             className="ast-builder-social-element ast-inline-flex ast-facebook header-social-item"
                             aria-label="Facebook"
-                            href="https://socialscribe.aipoool.com/"
+                            href="https://www.facebook.com/aipoool"
                             rel="noopener noreferrer"
                             target="_blank"
                             style={{
@@ -233,7 +233,7 @@ const Header = () => {
                           <a
                             className="ast-builder-social-element ast-inline-flex ast-twitter header-social-item"
                             aria-label="Twitter"
-                            href="https://socialscribe.aipoool.com/"
+                            href="https://twitter.com/aipoool_ai"
                             rel="noopener noreferrer"
                             target="_blank"
                             style={{
@@ -290,7 +290,7 @@ const Header = () => {
                           <a
                             className="ast-builder-social-element ast-inline-flex ast-instagram header-social-item"
                             aria-label="Instagram"
-                            href="https://socialscribe.aipoool.com/"
+                            href="https://www.instagram.com/_aipoool_ai_/"
                             rel="noopener noreferrer"
                             target="_blank"
                             style={{

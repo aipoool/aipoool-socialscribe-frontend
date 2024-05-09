@@ -57,11 +57,8 @@ const RegisteredUser = ({ isNewUser = true }) => {
     window.location.href = "https://twitter.com/";
   };
 
-  const logout = () => {
-    // Add your logout logic here
-    // Clearing the userdata in the storages
-    chrome.storage.sync.clear();
-    window.location.reload();
+  const aboutSocialScribe = () => {
+    window.location.href = "https://socialscribe.aipoool.com/";
   };
 
   const openSettings = () => {
@@ -132,7 +129,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                             </>
                           ) : (
                             <>
-                              <button onClick={logout}>Logout</button>
+                              <button onClick={aboutSocialScribe}>About SocialScribe</button>
                               <button onClick={openSettings}>
                                 Open Settings
                               </button>

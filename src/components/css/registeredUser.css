@@ -1556,4 +1556,8 @@ p,.entry-content p {
 .spacing {
   height: 20px; /* Adjust the height as needed for your spacing */
 }
+.card-img-top {
+  padding: 10px; /* Change this value as per your requirement */
+}
+
 

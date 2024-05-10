@@ -122,7 +122,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                         <div className="redirect-buttons">
                           {isNewUser ? (
                             <>
-                              <div class="container">
+                              {/* <div class="container">
                                 <div class="row">
                                   <div class="col">
                                     <img src="/src/gif/LinkedIn GIF.gif" alt="alt"></img>
@@ -134,6 +134,25 @@ const RegisteredUser = ({ isNewUser = true }) => {
                                   <div class="col">
                                   <img src="/src/gif/X GIF.gif" alt="alt"></img>
                                     <button onClick={redirectToX}>
+                                      Go to X
+                                    </button>
+                                  </div>
+                                </div>
+                              </div> */}
+
+                              <div class="card-deck">
+                                <div class="card">
+                                  <img class="card-img-top" src="/src/gif/LinkedIn GIF.gif" alt="Add the LinkedIn GIF Here"/>
+                                  <div class="card-body">
+                                  <button onClick={redirectToLinkedIn}>
+                                      Go to LinkedIn
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="card">
+                                  <img class="card-img-top" src="/src/gif/X GIF.gif" alt="Add X GIF here"/>
+                                  <div class="card-body">
+                                  <button onClick={redirectToX}>
                                       Go to X
                                     </button>
                                   </div>

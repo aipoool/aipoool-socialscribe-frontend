@@ -142,7 +142,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
 
                               <div class="card-deck">
                                 <div class="card">
-                                  <img class="card-img-top" src="/src/gif/LinkedIn GIF.gif" alt="Add the LinkedIn GIF Here" />
+                                  <img class="card-img-top" src="https://user-images.githubusercontent.com/14011726/94132137-7d4fc100-fe7c-11ea-8512-69f90cb65e48.gif" alt="Add the LinkedIn GIF Here" />
                                   <div class="card-body">
                                     <button onClick={redirectToLinkedIn}>
                                       Go to LinkedIn
@@ -150,7 +150,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                                   </div>
                                 </div>
                                 <div class="card">
-                                  <img class="card-img-top" src="/src/gif/X GIF.gif" alt="Add X GIF here" />
+                                  <img class="card-img-top" src="https://user-images.githubusercontent.com/14011726/94132137-7d4fc100-fe7c-11ea-8512-69f90cb65e48.gif" alt="Add X GIF here" />
                                   <div class="card-body">
                                     <button onClick={redirectToX}>
                                       Go to X

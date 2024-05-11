@@ -1532,7 +1532,7 @@ p,.entry-content p {
 
 .card {
   background-color: #fff; /* Warna latar card */
-  padding: 20px;
+  padding: 0px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #3498db; /* Warna teks pada card */

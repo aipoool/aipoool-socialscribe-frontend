@@ -1,6 +1,8 @@
 import React from "react";
 import Layout from "./Layout";
 import "../css/login.css";
+import signinImage from "../image/signin-img.png";
+import logo from "../logo/Icon social scribe (128 x 128 px).png";
 
 const Login = () => {
   const loginwithgoogle = () => {
@@ -62,12 +64,52 @@ const Login = () => {
                                 </div>
                                 <div class="spacing"></div>
                                 <a className="return-homepage" href="https://socialscribe.aipoool.com/">Return to Homepage</a> */}
-
                   </div>
                 </div>
               </div>
             </div>
-
+            <div class="spacing"></div>
+            <div class="card login-card">
+              <div class="row no-gutters">
+                <div class="col-md-5">
+                  <img src={signinImage} alt="login" class="login-card-img" />
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <div class="brand-wrapper">
+                      <img src={logo} alt="logo" class="logo" />
+                    </div>
+                    <p class="login-card-description">
+                      Use you Google Account to Sign In
+                    </p>
+                    <button
+                      id="loginBtn"
+                      class="btn btn-block login-btn mb-4"
+                      onClick={loginwithgoogle}
+                    >
+                      <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-text">
+                          Sign in With Google
+                        </span>
+                      </span>
+                    </button>
+                    <a
+                      href="https://socialscribe.aipoool.com/"
+                      class="forgot-password-link"
+                    >
+                      Return to Homepage
+                    </a>
+                    
+                    <p class="login-card-footer-text">
+                      Have feedbacks or queries?{" "}
+                      <a href="#!" class="text-reset">
+                        Click here
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div
             class="elementor-element elementor-element-f791ffd elementor-widget elementor-widget-spacer"
@@ -84,57 +126,89 @@ const Login = () => {
         </div>
       </div>
       <div
-        class="elementor-element elementor-element-3b42446 e-con-full e-flex e-con e-child"
-        data-id="3b42446"
-        data-element_type="container"
+        class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-3-cheavy ast-builder-grid-row-tablet-3-equal ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack snipcss-YE11r"
+        data-section="section-below-footer-builder"
       >
-                    <div class="card login-card">
-                      <div class="row no-gutters">
-                        <div class="col-md-5">
-                          <img
-                            src="/src/image/signin-img.png"
-                            alt="login"
-                            class="login-card-img"
-                          />
-                        </div>
-                        <div class="col-md-7">
-                          <div class="card-body">
-                            <div class="brand-wrapper">
-                              <img
-                                src="/"
-                                alt="logo"
-                                class="logo"
-                              />
-                            </div>
-                            <p class="login-card-description">
-                              Please Log In to the Extension
-                            </p>
-                            <button
-                              id="loginBtn"
-                              class="btn btn-block login-btn mb-4"
-                            >
-                              Login
-                            </button>
-                            <a
-                              href="https://aipoool.com/about-us/"
-                              class="forgot-password-link"
-                            >
-                              Curious about AIPOOOL ?
-                            </a>
-                            <p class="login-card-footer-text">
-                              Have feedbacks or queries?{" "}
-                              <a href="#!" class="text-reset">
-                                Click here
-                              </a>
-                            </p>
-                            <nav class="login-card-footer-nav">
-                              <a href="#!">Terms of use.</a>
-                              <a href="#!">Privacy policy</a>
-                            </nav>
-                          </div>
-                        </div>
-                      </div>
+        <div class="ast-builder-grid-row-container-inner">
+          <div class="ast-builder-footer-grid-columns site-below-footer-inner-wrap ast-builder-grid-row">
+            <div class="site-footer-below-section-1 site-footer-section site-footer-section-1">
+              <div
+                class="footer-widget-area widget-area site-footer-focus-item ast-footer-html-1"
+                data-section="section-fb-html-1"
+              >
+                <div class="ast-header-html inner-link-style-">
+                  <div class="ast-builder-html-element">
+                    <p>
+                      <img
+                        class="size-full wp-image-1628"
+                        src="https://socialscribe.aipoool.com/wp-content/uploads/2024/05/AIpool-1.png"
+                        alt="footer logo"
+                        width="250"
+                        height="100"
+                      />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="site-footer-below-section-2 site-footer-section site-footer-section-2">
+              <div
+                class="ast-builder-layout-element ast-flex site-footer-focus-item ast-footer-copyright"
+                data-section="section-footer-builder"
+              >
+                <div class="ast-footer-copyright">
+                  <p>© 2024 socialscribe. Powered by [aipoool].</p>
+                </div>
+              </div>
+            </div>
+            <div class="site-footer-below-section-3 site-footer-section site-footer-section-3">
+              <div
+                class="footer-widget-area widget-area site-footer-focus-item"
+                data-section="section-footer-menu"
+              >
+                <div class="footer-bar-navigation">
+                  <nav
+                    class="site-navigation ast-flex-grow-1 navigation-accessibility footer-navigation"
+                    id="footer-site-navigation"
+                    aria-label="Site Navigation: Footer - terms"
+                    itemtype="https://schema.org/SiteNavigationElement"
+                    itemscope="itemscope"
+                  >
+                    <div class="footer-nav-wrap">
+                      <ul
+                        id="astra-footer-menu"
+                        class="ast-nav-menu ast-flex astra-footer-horizontal-menu astra-footer-tablet-vertical-menu astra-footer-mobile-vertical-menu"
+                      >
+                        <li
+                          id="menu-item-808"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-808"
+                        >
+                          <a
+                            href="https://aipoool.com/terms-conditions/"
+                            class="menu-link"
+                          >
+                            Terms and Conditions
+                          </a>
+                        </li>
+                        <li
+                          id="menu-item-809"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-809"
+                        >
+                          <a
+                            href="https://aipoool.com/privacy-policy/"
+                            class="menu-link"
+                          >
+                            Privacy Policy
+                          </a>
+                        </li>
+                      </ul>
                     </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

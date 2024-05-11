@@ -29,7 +29,7 @@ const EnterOpenAIKey = () => {
   useEffect(() => {
     fetchSessionData().then(() => {
       setIsLoading(false);
-    }, 7000);
+    }, 3000);
   }, []);
 
   // Check if userdata has OpenAIKey field and it is not null

@@ -33,7 +33,7 @@ const Login = () => {
                                     </div>
                                 </div>
                                 <div class="spacing"></div>
-                                <a className="return-homepage" href="/">Return to Homepage</a>
+                                <a className="return-homepage" href="https://socialscribe.aipoool.com/">Return to Homepage</a>
                             </div>
                           </div>
                       </div>

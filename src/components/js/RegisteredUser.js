@@ -153,7 +153,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                       </div>
                       <div class="spacing"></div>
 
-                      <a className="return-homepage" href="/">
+                      <a className="return-homepage" href="https://socialscribe.aipoool.com/">
                         Return to Homepage
                       </a>
                     </div>

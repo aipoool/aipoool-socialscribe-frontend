@@ -136,7 +136,7 @@ const OpenAIKeyForm = ({ userId }) => {
 
                       </div>
                     </div>
-                    <a className="return-homepage" href="/">
+                    <a className="return-homepage" href="https://socialscribe.aipoool.com/">
                       Return to Homepage
                     </a>
                   </div>

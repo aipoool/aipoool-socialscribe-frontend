@@ -1523,6 +1523,18 @@ p,.entry-content p {
 
 
 
+.card{
+  margin: 5% 0%;
+}
+
+.card-body{
+  margin: 0% 0% 0% 3%;
+  padding: 6% 0%;
+}
+
+
+
+
 
 
 
@@ -1557,9 +1569,7 @@ p,.entry-content p {
 .spacing {
   height: 20px; /* Adjust the height as needed for your spacing */
 }
-.card-img-top {
-  padding: 10px; /* Change this value as per your requirement */
-}
+
 /* HTML: <div class="loader"></div> */
 .loader {
   width: fit-content;

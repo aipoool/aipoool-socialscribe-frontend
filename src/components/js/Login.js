@@ -80,7 +80,7 @@ const Login = () => {
                           <div class="card-body">
                             <div class="brand-wrapper">
                               <img
-                                src="./icons//128.png"
+                                src="/"
                                 alt="logo"
                                 class="logo"
                               />
@@ -98,14 +98,9 @@ const Login = () => {
                               href="https://aipoool.com/about-us/"
                               class="forgot-password-link"
                             >
-                              Curious about AIPOOOL ?
+                              Return to Homepage
                             </a>
-                            <p class="login-card-footer-text">
-                              Have feedbacks or queries?{" "}
-                              <a href="#!" class="text-reset">
-                                Click here
-                              </a>
-                            </p>
+
                             <nav class="login-card-footer-nav">
                               <a href="#!">Terms of use.</a>
                               <a href="#!">Privacy policy</a>

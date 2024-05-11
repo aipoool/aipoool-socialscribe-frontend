@@ -49,7 +49,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
 
   const para = isNewUser
     ? "Thank you for submitting your OpenAI key."
-    : `Welcome <b>${userData.name}</b>! \n You can start using the extension by going to X.com or other supported websites.`;
+    : `Welcome **${userData.userName}**! \n You can start using the extension by going to X.com or other supported websites.`;
   const redirectToLinkedIn = () => {
     window.location.href = "https://www.linkedin.com";
   };

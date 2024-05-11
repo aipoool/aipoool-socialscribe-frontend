@@ -45,11 +45,11 @@ const RegisteredUser = ({ isNewUser = true }) => {
 
   const heading = isNewUser
     ? "Registration Successful!"
-    : "It's great to have you back ! 🥳.";
+    : "It's great to have you back ! 🥳";
 
   const para = isNewUser
     ? "Thank you for submitting your OpenAI key."
-    : `You're logged in as ${userData.email}. \n You can start using the extension by going to X.com or other supported websites.`;
+    : `Welcome <b>${userData.name}</b>! \n You can start using the extension by going to X.com or other supported websites.`;
   const redirectToLinkedIn = () => {
     window.location.href = "https://www.linkedin.com";
   };

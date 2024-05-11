@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import "../css/registeredUser.css";
 import axios from "axios";
+import linkedInGIF from "../gif/LinkedIn GIF.gif";
+import XGIF from "../gif/X GIF.gif";
 
 var extensionId = "dnjmipaneoddchfeamgdabpiomihncii";
 
@@ -134,7 +136,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                             <div class="view overlay">
                               <img
                                 class="card-img-top"
-                                src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+                                src={linkedInGIF}
                                 alt="Card image cap"
                               />
                               <a href="#!">
@@ -155,7 +157,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                             <div class="view overlay">
                               <img
                                 class="card-img-top"
-                                src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
+                                src={XGIF}
                                 alt="Card image cap"
                               />
                               <a href="#!">

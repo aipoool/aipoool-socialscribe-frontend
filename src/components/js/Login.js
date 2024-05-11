@@ -63,7 +63,11 @@ const Login = () => {
                                 <div class="spacing"></div>
                                 <a className="return-homepage" href="https://socialscribe.aipoool.com/">Return to Homepage</a> */}
 
-                    <div class="card login-card">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card login-card">
                       <div class="row no-gutters">
                         <div class="col-md-5">
                           <img
@@ -110,10 +114,6 @@ const Login = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
           <div
             class="elementor-element elementor-element-f791ffd elementor-widget elementor-widget-spacer"

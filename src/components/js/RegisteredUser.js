@@ -158,11 +158,11 @@ const RegisteredUser = ({ isNewUser = true }) => {
                                     </div>
                                   </div>
                                 </div>
-                                <button onClick={redirectToLinkedIn}>
+                                {/* <button onClick={redirectToLinkedIn}>
                                   Go to LinkedIn
                                 </button>
 
-                                <button onClick={redirectToX}>Go to X</button>
+                                <button onClick={redirectToX}>Go to X</button> */}
                               </>
                             ) : (
                               <>

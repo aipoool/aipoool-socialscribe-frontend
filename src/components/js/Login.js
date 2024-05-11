@@ -1,24 +1,52 @@
-import React from 'react'
-import Layout from './Layout'
-import "../css/login.css"
+import React from "react";
+import Layout from "./Layout";
+import "../css/login.css";
 
 const Login = () => {
+  const loginwithgoogle = () => {
+    window.open(
+      "https://aipoool-socialscribe-backend.onrender.com/auth/google/callback",
+      "_self"
+    );
+  };
 
-    const loginwithgoogle = ()=>{
-        window.open("https://aipoool-socialscribe-backend.onrender.com/auth/google/callback","_self")
-    }
+  return (
+    <>
+      <div
+        class="elementor-element elementor-element-9e0036e e-flex e-con-boxed e-con e-parent e-lazyloaded snipcss-97bdC"
+        data-id="9e0036e"
+        data-element_type="container"
+        data-settings='{"background_background":"classic"}'
+      >
+        <div class="e-con-inner">
+          <div
+            class="elementor-element elementor-element-ed79abc e-con-full e-flex e-con e-child"
+            data-id="ed79abc"
+            data-element_type="container"
+          >
+            <div
+              class="elementor-element elementor-element-597b965 e-con-full e-flex e-con e-child"
+              data-id="597b965"
+              data-element_type="container"
+            >
+              <div
+                class="elementor-element elementor-element-11d9bb4 e-con-full e-flex e-con e-child"
+                data-id="11d9bb4"
+                data-element_type="container"
+              >
+                <div
+                  class="elementor-element elementor-element-1f4402a elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget elementor-widget-heading"
+                  data-id="1f4402a"
+                  data-element_type="widget"
+                  data-widget_type="heading.default"
+                >
+                  <div class="elementor-widget-container">
+                    <h2 class="elementor-heading-title elementor-size-default">
+                      Welcome to SocialScribe!
+                    </h2>
+                    {/* <div class="elementor-element elementor-element-9a3d259 elementor-widget__width-auto elementor-mobile-align-center elementor-widget-mobile__width-inherit elementor-align-left elementor-widget elementor-widget-button" data-id="9a3d259" data-element_type="widget" data-widget_type="button.default"> */}
 
-    return (
-      <div class="elementor-element elementor-element-9e0036e e-flex e-con-boxed e-con e-parent e-lazyloaded snipcss-97bdC" data-id="9e0036e" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-      <div class="e-con-inner">
-          <div class="elementor-element elementor-element-ed79abc e-con-full e-flex e-con e-child" data-id="ed79abc" data-element_type="container">
-              <div class="elementor-element elementor-element-597b965 e-con-full e-flex e-con e-child" data-id="597b965" data-element_type="container">
-                  <div class="elementor-element elementor-element-11d9bb4 e-con-full e-flex e-con e-child" data-id="11d9bb4" data-element_type="container">
-                      <div class="elementor-element elementor-element-1f4402a elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget elementor-widget-heading" data-id="1f4402a" data-element_type="widget" data-widget_type="heading.default">
-                          <div class="elementor-widget-container">
-                              <h2 class="elementor-heading-title elementor-size-default">Sign in to SocialScribe</h2>
-                              <div class="elementor-element elementor-element-9a3d259 elementor-widget__width-auto elementor-mobile-align-center elementor-widget-mobile__width-inherit elementor-align-left elementor-widget elementor-widget-button" data-id="9a3d259" data-element_type="widget" data-widget_type="button.default">
-                                <div class="elementor-widget-container">
+                    {/* <div class="elementor-widget-container">
                                     <div class="elementor-button-wrapper">
                                         <button class="elementor-button elementor-button-link elementor-size-sm" onClick={loginwithgoogle} target="_blank">
                                             <span class="elementor-button-content-wrapper">
@@ -33,27 +61,83 @@ const Login = () => {
                                     </div>
                                 </div>
                                 <div class="spacing"></div>
-                                <a className="return-homepage" href="https://socialscribe.aipoool.com/">Return to Homepage</a>
+                                <a className="return-homepage" href="https://socialscribe.aipoool.com/">Return to Homepage</a> */}
+
+                    <div class="container skipcss snipcss-6G7LP" id="login">
+                      <div class="card login-card">
+                        <div class="row no-gutters">
+                          <div class="col-md-5">
+                            <img
+                              src="/src/image/signin-img.png"
+                              alt="login"
+                              class="login-card-img"
+                            />
+                          </div>
+                          <div class="col-md-7">
+                            <div class="card-body">
+                              <div class="brand-wrapper">
+                                <img
+                                  src="./icons//128.png"
+                                  alt="logo"
+                                  class="logo"
+                                />
+                              </div>
+                              <p class="login-card-description">
+                                Please Log In to the Extension
+                              </p>
+                              <button
+                                id="loginBtn"
+                                class="btn btn-block login-btn mb-4"
+                              >
+                                Login
+                              </button>
+                              <a
+                                href="https://aipoool.com/about-us/"
+                                class="forgot-password-link"
+                              >
+                                Curious about AIPOOOL ?
+                              </a>
+                              <p class="login-card-footer-text">
+                                Have feedbacks or queries?{" "}
+                                <a href="#!" class="text-reset">
+                                  Click here
+                                </a>
+                              </p>
+                              <nav class="login-card-footer-nav">
+                                <a href="#!">Terms of use.</a>
+                                <a href="#!">Privacy policy</a>
+                              </nav>
                             </div>
                           </div>
+                        </div>
                       </div>
-                      </div>
-                      <div class="elementor-element elementor-element-f791ffd elementor-widget elementor-widget-spacer" data-id="f791ffd" data-element_type="widget" data-widget_type="spacer.default">
-                          <div class="elementor-widget-container">
-                              <div class="elementor-spacer">
-                                  <div class="elementor-spacer-inner"></div>
-                              </div>
-                          </div>
-                      </div>
-
+                    </div>
                   </div>
+                </div>
               </div>
-              <div class="elementor-element elementor-element-3b42446 e-con-full e-flex e-con e-child" data-id="3b42446" data-element_type="container">
+            </div>
+            <div
+              class="elementor-element elementor-element-f791ffd elementor-widget elementor-widget-spacer"
+              data-id="f791ffd"
+              data-element_type="widget"
+              data-widget_type="spacer.default"
+            >
+              <div class="elementor-widget-container">
+                <div class="elementor-spacer">
+                  <div class="elementor-spacer-inner"></div>
+                </div>
               </div>
+            </div>
           </div>
+        </div>
+        <div
+          class="elementor-element elementor-element-3b42446 e-con-full e-flex e-con e-child"
+          data-id="3b42446"
+          data-element_type="container"
+        ></div>
       </div>
+    </>
+  );
+};
 
-      );
-}
-
-export default Login
+export default Login;

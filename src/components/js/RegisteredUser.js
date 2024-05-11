@@ -124,7 +124,25 @@ const RegisteredUser = ({ isNewUser = true }) => {
                     </h2>
                     <p class="elementor-size-default">{para}</p>
 
-                    <div className="redirect-buttons">
+
+                  </div>
+                </div>
+              </div>
+              <div
+                class="elementor-element elementor-element-f791ffd elementor-widget elementor-widget-spacer"
+                data-id="f791ffd"
+                data-element_type="widget"
+                data-widget_type="spacer.default"
+              >
+                <div class="elementor-widget-container">
+                  <div class="elementor-spacer">
+                    <div class="elementor-spacer-inner"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="redirect-buttons">
                       {isNewUser ? (
                         <>
 
@@ -186,24 +204,6 @@ const RegisteredUser = ({ isNewUser = true }) => {
                         </>
                       )}
                     </div> 
-
-                  </div>
-                </div>
-              </div>
-              <div
-                class="elementor-element elementor-element-f791ffd elementor-widget elementor-widget-spacer"
-                data-id="f791ffd"
-                data-element_type="widget"
-                data-widget_type="spacer.default"
-              >
-                <div class="elementor-widget-container">
-                  <div class="elementor-spacer">
-                    <div class="elementor-spacer-inner"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div
             class="elementor-element elementor-element-3b42446 e-con-full e-flex e-con e-child"
             data-id="3b42446"

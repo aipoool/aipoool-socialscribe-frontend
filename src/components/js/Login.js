@@ -24,41 +24,6 @@ const Login = () => {
             data-id="ed79abc"
             data-element_type="container"
           >
-            <div class="card login-card">
-              <div class="row no-gutters">
-                <div class="col-md-5">
-                  <img
-                    src="/src/image/signin-img.png"
-                    alt="login"
-                    class="login-card-img"
-                  />
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body">
-                    <div class="brand-wrapper">
-                      <img src="/" alt="logo" class="logo" />
-                    </div>
-                    <p class="login-card-description">
-                      Please Log In to the Extension
-                    </p>
-                    <button id="loginBtn" class="btn btn-block login-btn mb-4">
-                      Login
-                    </button>
-                    <a
-                      href="https://aipoool.com/about-us/"
-                      class="forgot-password-link"
-                    >
-                      Return to Homepage
-                    </a>
-
-                    <nav class="login-card-footer-nav">
-                      <a href="#!">Terms of use.</a>
-                      <a href="#!">Privacy policy</a>
-                    </nav>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div
               class="elementor-element elementor-element-597b965 e-con-full e-flex e-con e-child"
               data-id="597b965"
@@ -97,10 +62,12 @@ const Login = () => {
                                 </div>
                                 <div class="spacing"></div>
                                 <a className="return-homepage" href="https://socialscribe.aipoool.com/">Return to Homepage</a> */}
+
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
           <div
             class="elementor-element elementor-element-f791ffd elementor-widget elementor-widget-spacer"
@@ -120,7 +87,55 @@ const Login = () => {
         class="elementor-element elementor-element-3b42446 e-con-full e-flex e-con e-child"
         data-id="3b42446"
         data-element_type="container"
-      ></div>
+      >
+                    <div class="card login-card">
+                      <div class="row no-gutters">
+                        <div class="col-md-5">
+                          <img
+                            src="/src/image/signin-img.png"
+                            alt="login"
+                            class="login-card-img"
+                          />
+                        </div>
+                        <div class="col-md-7">
+                          <div class="card-body">
+                            <div class="brand-wrapper">
+                              <img
+                                src="/"
+                                alt="logo"
+                                class="logo"
+                              />
+                            </div>
+                            <p class="login-card-description">
+                              Please Log In to the Extension
+                            </p>
+                            <button
+                              id="loginBtn"
+                              class="btn btn-block login-btn mb-4"
+                            >
+                              Login
+                            </button>
+                            <a
+                              href="https://aipoool.com/about-us/"
+                              class="forgot-password-link"
+                            >
+                              Curious about AIPOOOL ?
+                            </a>
+                            <p class="login-card-footer-text">
+                              Have feedbacks or queries?{" "}
+                              <a href="#!" class="text-reset">
+                                Click here
+                              </a>
+                            </p>
+                            <nav class="login-card-footer-nav">
+                              <a href="#!">Terms of use.</a>
+                              <a href="#!">Privacy policy</a>
+                            </nav>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+      </div>
     </>
   );
 };

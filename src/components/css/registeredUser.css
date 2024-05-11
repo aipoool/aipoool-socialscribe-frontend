@@ -1560,11 +1560,7 @@ p,.entry-content p {
 .card-img-top {
   padding: 10px; /* Change this value as per your requirement */
 }
-.card-deck {
-  display: flex; /* Add this line */
-  flex-wrap: wrap; /* Add this line if you want the items to wrap */
-  justify-content: space-around; /* Add this line to add some space around the cards */
-}
+
 
 
 

@@ -130,9 +130,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                       <div class="elementor-widget-container">
                         <div class="elementor-button-wrapper container">
                           <div className="redirect-buttons">
-                            {isNewUser === null ? (
-                              <div class="loader"></div>
-                            ) : isNewUser ? (
+                            {isNewUser ? (
                               <>
                                 <button onClick={redirectToLinkedIn}>
                                   Go to LinkedIn

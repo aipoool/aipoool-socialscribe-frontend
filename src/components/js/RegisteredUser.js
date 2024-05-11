@@ -122,9 +122,14 @@ const RegisteredUser = ({ isNewUser = true }) => {
                     </h2>
                     <p class="elementor-size-default">{para}</p>
 
+                    <div className="redirect-buttons">
+                      {isNewUser ? (
+                        <>
+
+                        
                     <div class="container">
                       <div class="card-deck row">
-                        <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="col-sm-6 col-md-6">
                           <div class="card">
                             <div class="view overlay">
                               <img
@@ -138,25 +143,14 @@ const RegisteredUser = ({ isNewUser = true }) => {
                             </div>
 
                             <div class="card-body">
-                              <h4 class="card-title">1 Card title</h4>
-
-                              <p class="card-text">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card's
-                                content.
-                              </p>
-
-                              <button
-                                type="button"
-                                class="btn btn-light-blue btn-md"
-                              >
-                                Read more
-                              </button>
+                            <button onClick={redirectToLinkedIn}>
+                            Go to LinkedIn
+                          </button>
                             </div>
                           </div>
                         </div>
 
-                        <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="col-sm-6 col-md-6">
                           <div class="card mb-4">
                             <div class="view overlay">
                               <img
@@ -170,34 +164,18 @@ const RegisteredUser = ({ isNewUser = true }) => {
                             </div>
 
                             <div class="card-body">
-                              <h4 class="card-title">2 Card title</h4>
-
-                              <p class="card-text">
-                                Some quick example text to build on the card
-                                title and make up the bulk of the card's
-                                content.
-                              </p>
-
-                              <button
-                                type="button"
-                                class="btn btn-light-blue btn-md"
-                              >
-                                Read more
-                              </button>
+                            <button onClick={redirectToX}>Go to X</button>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    {/* <div className="redirect-buttons">
-                      {isNewUser ? (
-                        <>
-                          <button onClick={redirectToLinkedIn}>
+                          {/* <button onClick={redirectToLinkedIn}>
                             Go to LinkedIn
                           </button>
 
-                          <button onClick={redirectToX}>Go to X</button>
+                          <button onClick={redirectToX}>Go to X</button> */}
                         </>
                       ) : (
                         <>
@@ -205,43 +183,8 @@ const RegisteredUser = ({ isNewUser = true }) => {
                           <button onClick={openSettings}>Open Settings</button>
                         </>
                       )}
-                    </div> */}
-                    {/* <div
-                      class="elementor-element elementor-element-9a3d259 elementor-widget__width-auto elementor-mobile-align-center elementor-widget-mobile__width-inherit elementor-align-left elementor-widget elementor-widget-button"
-                      data-id="9a3d259"
-                      data-element_type="widget"
-                      data-widget_type="button.default"
-                    >
-                      <div class="elementor-widget-container">
-                        <div class="elementor-button-wrapper container">
-                          <div className="redirect-buttons">
-                            {isNewUser ? (
-                              <>
-                                <button onClick={redirectToLinkedIn}>
-                                  Go to LinkedIn
-                                </button>
+                    </div> 
 
-                                <button onClick={redirectToX}>Go to X</button>
-                              </>
-                            ) : (
-                              <>
-                                <button onClick={aboutSocialScribe}>
-                                  About Us
-                                </button>
-                                <button onClick={openSettings}>
-                                  Open Settings
-                                </button>
-                              </>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                      <div class="spacing"></div>
-
-                      <a className="return-homepage" href="https://socialscribe.aipoool.com/">
-                        Return to Homepage
-                      </a>
-                    </div> */}
                   </div>
                 </div>
               </div>

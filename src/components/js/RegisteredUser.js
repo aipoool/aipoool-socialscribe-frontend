@@ -71,7 +71,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
   return (
     <>
       <Helmet>
-      <script
+        <script
           src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
           integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
           crossorigin="anonymous"
@@ -127,13 +127,13 @@ const RegisteredUser = ({ isNewUser = true }) => {
                       data-element_type="widget"
                       data-widget_type="button.default"
                     >
-
                       <div class="elementor-widget-container">
                         <div class="elementor-button-wrapper container">
                           <div className="redirect-buttons">
-                            {isNewUser ? (
+                            {isNewUser === null ? (
+                              <div class="loader"></div>
+                            ) : isNewUser ? (
                               <>
-
                                 <button onClick={redirectToLinkedIn}>
                                   Go to LinkedIn
                                 </button>

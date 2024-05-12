@@ -78,16 +78,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
           integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
           crossorigin="anonymous"
         ></script>
-        <script
-          src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-          crossorigin="anonymous"
-        ></script>
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-          crossorigin="anonymous"
-        ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
       </Helmet>
 
       <div
@@ -146,8 +137,30 @@ const RegisteredUser = ({ isNewUser = true }) => {
                       {isNewUser ? (
                         <>
 
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                          <div class="col">
+                            <div class="card h-100">
+                              <img src="..." class="card-img-top" alt="..."/>
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="card h-100">
+                              <img src="..." class="card-img-top" alt="..."/>
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a short card.</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          </div>
+
                         
-                    <div class="container">
+                    {/* <div class="container">
                       <div class="card-deck row">
                         <div class="col-sm-6 col-md-6">
                           <div class="card">
@@ -189,7 +202,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
 
                           {/* <button onClick={redirectToLinkedIn}>
                             Go to LinkedIn

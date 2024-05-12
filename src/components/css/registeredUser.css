@@ -1546,7 +1546,7 @@ p,.entry-content p {
 .redirect-buttons {
     display: flex;
     justify-content: space-between;
-    max-width: 300px; /* Adjust as needed */
+    max-width: max-content; /* Adjust as needed */
     margin: auto;
 }
 

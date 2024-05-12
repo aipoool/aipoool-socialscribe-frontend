@@ -152,7 +152,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                   </div>
                   <div class="col">
                     <div class="card h-100">
-                      <img src="..." class="card-img-top" alt="..." style={{width: '100%', height: 'auto'}}/>
+                      <img src={XGIF} class="card-img-top" alt="..." style={{width: '100%', height: 'auto'}}/>
                       <div class="card-body">
                       <button style={{width: 'auto', height: 'auto'}} onClick={redirectToX}>Go to X</button>
                       </div>

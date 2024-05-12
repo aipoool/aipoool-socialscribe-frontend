@@ -137,30 +137,30 @@ const RegisteredUser = ({ isNewUser = true }) => {
                       {isNewUser ? (
                         <>
 
-                        {/* <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
                           <div class="col">
                             <div class="card h-100">
-                              <img src="..." class="card-img-top" alt="..."/>
+                              <img src={linkedInGIF} class="card-img-top" alt="..."/>
                               <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <button onClick={redirectToLinkedIn}>
+                            Go to LinkedIn
+                          </button>
                               </div>
                             </div>
                           </div>
                           <div class="col">
                             <div class="card h-100">
-                              <img src="..." class="card-img-top" alt="..."/>
+                              <img src={XGIF} class="card-img-top" alt="..."/>
                               <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a short card.</p>
+                              <button onClick={redirectToX}>Go to X</button>
                               </div>
                             </div>
                           </div>
 
-                          </div> */}
+                          </div>
 
                         
-                    <div class="container">
+                    {/* <div class="container">
                       <div class="card-deck row">
                         <div class="col-sm-6 col-md-6">
                           <div class="card">
@@ -202,7 +202,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
 
                           {/* <button onClick={redirectToLinkedIn}>
                             Go to LinkedIn

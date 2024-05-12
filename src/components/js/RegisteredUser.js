@@ -139,7 +139,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
             {isNewUser ? (
               <>
                 <div class="row row-cols-1 row-cols-md-2 g-4">
-                  <div class="col">
+                  {/* <div class="col">
                     <div class="card h-100">
                       <img src={linkedInGIF}  class="card-img-top" alt="..." style={{width: '100%', height: 'auto'}}/>
                       <div class="card-body">
@@ -157,7 +157,29 @@ const RegisteredUser = ({ isNewUser = true }) => {
                       <button style={{width: 'auto', height: 'auto'}} onClick={redirectToX}>Go to X</button>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
+                  
+                    <div class="card">
+                        <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3
+                      mins ago</small></p>
+                      </div>
+                    <img src="../assets/images/blog/blogpost-1.jpg" class="card-img-bottom" alt="..."/>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3
+                      mins ago</small></p>
+                      </div>
+                    <img src="../assets/images/blog/blogpost-1.jpg" class="card-img-bottom" alt="..."/>
+                    </div>
                 </div>
 
                 {/* <div class="container">

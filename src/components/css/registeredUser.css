@@ -1553,6 +1553,19 @@ p,.entry-content p {
   transform: translateY(100%);
 }
 
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
 .card:hover::before {
   transform: translateY(0);
 }

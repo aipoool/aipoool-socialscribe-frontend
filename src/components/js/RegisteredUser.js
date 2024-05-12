@@ -152,10 +152,9 @@ const RegisteredUser = ({ isNewUser = true }) => {
                   </div>
                   <div class="col">
                     <div class="card h-100">
-                      <img src="..." class="card-img-top" alt="..." />
+                      <img src="..." class="card-img-top" alt="..." style={{width: '100%', height: 'auto'}}/>
                       <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a short card.</p>
+                      <button style={{width: 'auto', height: 'auto'}} onClick={redirectToX}>Go to X</button>
                       </div>
                     </div>
                   </div>

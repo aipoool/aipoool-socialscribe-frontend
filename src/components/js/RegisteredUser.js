@@ -143,10 +143,17 @@ const RegisteredUser = ({ isNewUser = true }) => {
                 <div class="row row-cols-1 row-cols-md-2 g-4">
                   <div class="col">
                     <div class="card h-100">
-                      <img src={linkedInGIF}  class="card-img-top" alt="..." style={{width: '100%', height: 'auto'}}/>
+                      <img
+                        src={linkedInGIF}
+                        class="card-img-top"
+                        alt="..."
+                        style={{ width: "100%", height: "auto" }}
+                      />
                       <div class="card-body">
-                        
-                        <button style={{width: 'auto', height: 'auto'}} onClick={redirectToLinkedIn}>
+                        <button
+                          style={{ width: "auto", height: "auto" }}
+                          onClick={redirectToLinkedIn}
+                        >
                           Go to LinkedIn
                         </button>
                       </div>
@@ -154,9 +161,19 @@ const RegisteredUser = ({ isNewUser = true }) => {
                   </div>
                   <div class="col">
                     <div class="card h-100">
-                      <img src={XGIF} class="card-img-top" alt="..." style={{width: '100%', height: 'auto'}}/>
+                      <img
+                        src={XGIF}
+                        class="card-img-top"
+                        alt="..."
+                        style={{ width: "100%", height: "auto" }}
+                      />
                       <div class="card-body">
-                      <button style={{width: 'auto', height: 'auto'}} onClick={redirectToX}>Go to X</button>
+                        <button
+                          style={{ width: "auto", height: "auto" }}
+                          onClick={redirectToX}
+                        >
+                          Go to X
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -214,24 +231,40 @@ const RegisteredUser = ({ isNewUser = true }) => {
               </>
             ) : (
               <>
-
-<div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="row row-cols-1 row-cols-md-2 g-4">
                   <div class="col">
-                    <div class="card h-100">
-                      <img src={aboutusImg}  class="card-img-top" alt="..." style={{width: '100%', height: 'auto'}}/>
+                    <div class="card mb-3">
+                      <img
+                        src={aboutusImg}
+                        class="card-img-top"
+                        alt="..."
+                        style={{ width: "100%", height: "auto" }}
+                      />
                       <div class="card-body">
-                        
-                        <button style={{width: 'auto', height: 'auto'}} onClick={aboutSocialScribe}>
-                        About Us
+                        <button
+                          style={{ width: "auto", height: "auto" }}
+                          onClick={aboutSocialScribe}
+                        >
+                          About Us
                         </button>
                       </div>
                     </div>
                   </div>
                   <div class="col">
-                    <div class="card h-100">
-                      <img src={openSetting} class="card-img-top" alt="..." style={{width: '100%', height: 'auto'}}/>
+                    <div class="card mb-3">
+                      <img
+                        src={openSetting}
+                        class="card-img-top"
+                        alt="..."
+                        style={{ width: "100%", height: "auto" }}
+                      />
                       <div class="card-body">
-                      <button style={{width: 'auto', height: 'auto'}} onClick={openSettings}>Open Settings</button>
+                        <button
+                          style={{ width: "auto", height: "auto" }}
+                          onClick={openSettings}
+                        >
+                          Open Settings
+                        </button>
                       </div>
                     </div>
                   </div>

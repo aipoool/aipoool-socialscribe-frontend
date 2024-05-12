@@ -240,15 +240,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                         alt="..."
                         style={{ width: "100%", height: "auto" }}
                       />
-                      <div class="card-overlay">
-                        <h2>About Us</h2>
-                        <button
-                          style={{ width: "auto", height: "auto" }}
-                          onClick={aboutSocialScribe}
-                        >
-                          Learn More
-                        </button>
-                      </div>
+
                       <div class="card-body">
                         <button
                           style={{ width: "auto", height: "auto" }}

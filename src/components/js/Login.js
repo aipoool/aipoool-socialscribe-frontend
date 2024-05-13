@@ -69,6 +69,7 @@ const Login = () => {
               </div>
             </div>
             <div class="spacing"></div>
+            
             <div class="card login-card">
               <div class="row no-gutters">
                 <div class="col-md-5">

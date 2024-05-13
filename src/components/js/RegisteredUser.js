@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import "../css/registeredUser.css";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import linkedInGIF from "../gif/LinkedIn GIF.gif";
 import XGIF from "../gif/X GIF.gif";
@@ -81,8 +82,13 @@ const RegisteredUser = ({ isNewUser = true }) => {
           crossorigin="anonymous"
         ></script>
         <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
           crossorigin="anonymous"
         ></script>
       </Helmet>
@@ -231,7 +237,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
               </>
             ) : (
               <>
-                <div class="row row-cols-1 row-cols-md-2 g-4">
+                {/* <div class="row row-cols-1 row-cols-md-2 g-4">
                   <div class="col">
                     <div class="card mb-3">
                       <img
@@ -267,6 +273,44 @@ const RegisteredUser = ({ isNewUser = true }) => {
                           Open Settings
                         </button>
                       </div>
+                    </div>
+                  </div>
+                </div> */}
+                <div class="card-deck">
+                  <div class="card bg-dark text-white">
+                    <img
+                      class="card-img"
+                      src="https://i0.wp.com/www.galvanizeaction.org/wp-content/uploads/2022/06/Wow-gif.gif?fit=450%2C250&ssl=1"
+                      alt="Card image"
+                    />
+                    <div class="card-img-overlay">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        This is a wider card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                      <button type="button" class="btn btn-primary">
+                        Primary
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card bg-dark text-white">
+                    <img
+                      class="card-img"
+                      src="https://i0.wp.com/www.galvanizeaction.org/wp-content/uploads/2022/06/Wow-gif.gif?fit=450%2C250&ssl=1"
+                      alt="Card image"
+                    />
+                    <div class="card-img-overlay">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        This is a wider card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                      <button type="button" class="btn btn-primary">
+                        Primary
+                      </button>
                     </div>
                   </div>
                 </div>

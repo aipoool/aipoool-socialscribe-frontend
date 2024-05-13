@@ -81,7 +81,7 @@ const Login = () => {
                       <img src={logo} alt="logo" class="logo" />
                     </div>
                     <p class="login-card-description">
-                      Use you Google Account to Sign In
+                      Use your Google Account to Sign In
                     </p>
                     <button
                       id="loginBtn"
@@ -103,7 +103,7 @@ const Login = () => {
                     
                     <p class="login-card-footer-text">
                       Have feedbacks or queries?{" "}
-                      <a href="#!" class="text-reset">
+                      <a href="https://socialscribe.aipoool.com/feedback/" class="text-reset">
                         Click here
                       </a>
                     </p>

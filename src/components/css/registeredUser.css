@@ -705,7 +705,7 @@ html {
 
   .e-con::before, .e-con > .elementor-background-slideshow::before, .e-con > .elementor-motion-effects-container > .elementor-motion-effects-layer::before, :is(.e-con, .e-con > .e-con-inner) > .elementor-background-video-container::before { 
     content: var(--background-overlay); 
-    display: flex; 
+    display: block; 
     position: absolute; 
     mix-blend-mode: var(--overlay-mix-blend-mode); 
     opacity: var(--overlay-opacity); 

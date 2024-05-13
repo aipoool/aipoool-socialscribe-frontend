@@ -136,6 +136,7 @@ const OpenAIKeyForm = ({ userId }) => {
                           </div>
                         </div>
                       </div>
+                      <div class="spacing"></div>
                       <a
                         className="return-homepage"
                         href="https://socialscribe.aipoool.com/"

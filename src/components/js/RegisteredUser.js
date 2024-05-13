@@ -390,6 +390,42 @@ const RegisteredUser = ({ isNewUser = true }) => {
           ></div>
         </div>
       </div>
+      <div class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-3-cheavy ast-builder-grid-row-tablet-3-equal ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack snipcss0-0-0-1 snipcss-8hDoQ" data-section="section-below-footer-builder">
+    <div class="ast-builder-grid-row-container-inner snipcss0-1-1-2">
+        <div class="ast-builder-footer-grid-columns site-below-footer-inner-wrap ast-builder-grid-row snipcss0-2-2-3">
+            <div class="site-footer-below-section-1 site-footer-section site-footer-section-1 snipcss0-3-3-4">
+                <div class="footer-widget-area widget-area site-footer-focus-item ast-footer-html-1 snipcss0-4-4-5" data-section="section-fb-html-1">
+                    <div class="ast-header-html inner-link-style- snipcss0-5-5-6">
+                        <div class="ast-builder-html-element snipcss0-6-6-7">
+                            <p class="snipcss0-7-7-8"><img class="size-full wp-image-1628 snipcss0-8-8-9" src="https://socialscribe.aipoool.com/wp-content/uploads/2024/05/AIpool-1.png" alt="footer logo" width="250" height="100"/></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer-below-section-2 site-footer-section site-footer-section-2 snipcss0-3-3-10">
+                <div class="ast-builder-layout-element ast-flex site-footer-focus-item ast-footer-copyright snipcss0-4-10-11" data-section="section-footer-builder">
+                    <div class="ast-footer-copyright snipcss0-5-11-12">
+                        <p class="snipcss0-6-12-13">© 2024 SocialScribe. Powered by [aipoool].</p>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer-below-section-3 site-footer-section site-footer-section-3 snipcss0-3-3-14">
+                <div class="footer-widget-area widget-area site-footer-focus-item snipcss0-4-14-15" data-section="section-footer-menu">
+                    <div class="footer-bar-navigation snipcss0-5-15-16">
+                        <nav class="site-navigation ast-flex-grow-1 navigation-accessibility footer-navigation snipcss0-6-16-17" id="footer-site-navigation" aria-label="Site Navigation: Footer - terms" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope">
+                            <div class="footer-nav-wrap snipcss0-7-17-18">
+                                <ul id="astra-footer-menu" class="ast-nav-menu ast-flex astra-footer-horizontal-menu astra-footer-tablet-vertical-menu astra-footer-mobile-vertical-menu snipcss0-8-18-19">
+                                    <li id="menu-item-808" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-808 snipcss0-9-19-20"><a href="https://aipoool.com/terms-conditions/" class="menu-link snipcss0-10-20-21">Terms and Conditions</a></li>
+                                    <li id="menu-item-809" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-809 snipcss0-9-19-22"><a href="https://aipoool.com/privacy-policy/" class="menu-link snipcss0-10-22-23">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     </>
   );
 };

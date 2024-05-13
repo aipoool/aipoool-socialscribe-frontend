@@ -5,7 +5,7 @@ import "../css/registeredUser.css";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import linkedInGIF from "../gif/LinkedIn(Edited-2).gif";
-import XGIF from "../gif/X GIF.gif";
+import XGIF from "../gif/X(Edited).gif";
 import aboutusImg from "../image/about-us-img.png";
 import openSetting from "../image/open-settings-img.png";
 

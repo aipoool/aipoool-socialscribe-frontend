@@ -237,7 +237,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
               </>
             ) : (
               <>
-                {/* <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="row row-cols-1 row-cols-md-2 g-4">
                   <div class="col">
                     <div class="card mb-3">
                       <img
@@ -275,45 +275,45 @@ const RegisteredUser = ({ isNewUser = true }) => {
                       </div>
                     </div>
                   </div>
-                </div> */}
-                <div class="card-deck">
-                  <div class="card bg-dark text-white">
-                    <img
-                      class="card-img"
-                      src="https://i0.wp.com/www.galvanizeaction.org/wp-content/uploads/2022/06/Wow-gif.gif?fit=450%2C250&ssl=1"
-                      alt="Card image"
-                    />
-                    <div class="card-img-overlay">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
-                      <button type="button" class="btn btn-primary">
-                        Primary
-                      </button>
-                    </div>
-                  </div>
-                  <div class="card bg-dark text-white">
-                    <img
-                      class="card-img"
-                      src="https://i0.wp.com/www.galvanizeaction.org/wp-content/uploads/2022/06/Wow-gif.gif?fit=450%2C250&ssl=1"
-                      alt="Card image"
-                    />
-                    <div class="card-img-overlay">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
-                      <button type="button" class="btn btn-primary">
-                        Primary
-                      </button>
-                    </div>
-                  </div>
                 </div>
+                {/* <div class="card-deck">
+                  <div class="card bg-dark text-white">
+                    <img
+                      class="card-img"
+                      src="https://i0.wp.com/www.galvanizeaction.org/wp-content/uploads/2022/06/Wow-gif.gif?fit=450%2C250&ssl=1"
+                      alt="Card image"
+                    />
+                    <div class="card-img-overlay">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        This is a wider card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                      <button type="button" class="btn btn-primary">
+                        Primary
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card bg-dark text-white">
+                    <img
+                      class="card-img"
+                      src="https://i0.wp.com/www.galvanizeaction.org/wp-content/uploads/2022/06/Wow-gif.gif?fit=450%2C250&ssl=1"
+                      alt="Card image"
+                    />
+                    <div class="card-img-overlay">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        This is a wider card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                      <button type="button" class="btn btn-primary">
+                        Primary
+                      </button>
+                    </div>
+                  </div>
+                </div> */}
               </>
             )}
           </div>

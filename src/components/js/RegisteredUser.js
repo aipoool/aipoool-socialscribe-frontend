@@ -276,13 +276,14 @@ const RegisteredUser = ({ isNewUser = true }) => {
                     </div>
                   </div>
                 </div> */}
-                <div class="row row-cols-1 row-cols-md-2 g-4">
+            
                   <div class="card-deck">
                     <div class="card bg-dark text-white">
                       <img
                         class="card-img"
                         src="https://i0.wp.com/www.galvanizeaction.org/wp-content/uploads/2022/06/Wow-gif.gif?fit=450%2C250&ssl=1"
                         alt="Card image"
+                        style={{ width: "100%", height: "auto" }}
                       />
                       <div class="card-img-overlay">
                         <h5 class="card-title">Card title</h5>
@@ -301,6 +302,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                         class="card-img"
                         src="https://i0.wp.com/www.galvanizeaction.org/wp-content/uploads/2022/06/Wow-gif.gif?fit=450%2C250&ssl=1"
                         alt="Card image"
+                        style={{ width: "100%", height: "auto" }}
                       />
                       <div class="card-img-overlay">
                         <h5 class="card-title">Card title</h5>
@@ -315,7 +317,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                       </div>
                     </div>
                   </div>
-                </div>
+              
               </>
             )}
           </div>

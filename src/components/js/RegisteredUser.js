@@ -277,14 +277,25 @@ const RegisteredUser = ({ isNewUser = true }) => {
                         alt="..."
                         style={{ width: "100%", height: "auto" }}
                       />
-                      <div class="card-body">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                          This is a wider card with supporting text below as a
+                          natural lead-in to additional content. This content is
+                          a little bit longer.
+                        </p>
+                        <button type="button" class="btn btn-primary">
+                          Primary
+                        </button>
+                      </div>
+                      {/* <div class="card-body">
                         <button
                           style={{ width: "auto", height: "auto" }}
                           onClick={openSettings}
                         >
                           Open Settings
                         </button>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>

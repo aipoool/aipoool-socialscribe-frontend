@@ -26,7 +26,7 @@ const OpenAIKeyForm = ({ userId }) => {
         {
           id: userId,
           openAIKey: openAIKey,
-        }, 
+        },
         { withCredentials: true }
       );
       console.log(response.data.id, response.data.openAIKey);
@@ -61,47 +61,48 @@ const OpenAIKeyForm = ({ userId }) => {
     //   </form>
     //   {message && <p>{message}</p>}
     // </div>
-    <div
-      class="elementor-element elementor-element-9e0036e e-flex e-con-boxed e-con e-parent e-lazyloaded snipcss-97bdC"
-      data-id="9e0036e"
-      data-element_type="container"
-      data-settings='{"background_background":"classic"}'
-    >
-      <div class="e-con-inner">
-        <div
-          class="elementor-element elementor-element-ed79abc e-con-full e-flex e-con e-child"
-          data-id="ed79abc"
-          data-element_type="container"
-        >
+    <>
+      <div
+        class="elementor-element elementor-element-9e0036e e-flex e-con-boxed e-con e-parent e-lazyloaded snipcss-97bdC"
+        data-id="9e0036e"
+        data-element_type="container"
+        data-settings='{"background_background":"classic"}'
+      >
+        <div class="e-con-inner">
           <div
-            class="elementor-element elementor-element-597b965 e-con-full e-flex e-con e-child"
-            data-id="597b965"
+            class="elementor-element elementor-element-ed79abc e-con-full e-flex e-con e-child"
+            data-id="ed79abc"
             data-element_type="container"
           >
             <div
-              class="elementor-element elementor-element-11d9bb4 e-con-full e-flex e-con e-child"
-              data-id="11d9bb4"
+              class="elementor-element elementor-element-597b965 e-con-full e-flex e-con e-child"
+              data-id="597b965"
               data-element_type="container"
             >
               <div
-                class="elementor-element elementor-element-1f4402a elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget elementor-widget-heading"
-                data-id="1f4402a"
-                data-element_type="widget"
-                data-widget_type="heading.default"
+                class="elementor-element elementor-element-11d9bb4 e-con-full e-flex e-con e-child"
+                data-id="11d9bb4"
+                data-element_type="container"
               >
-                <div class="elementor-widget-container">
-                  <h3 class="elementor-heading-title elementor-size-default">
-                    Kindly input your API key below
-                  </h3>
-                  <div
-                    class="elementor-element elementor-element-9a3d259 elementor-widget__width-auto elementor-mobile-align-center elementor-widget-mobile__width-inherit elementor-align-left elementor-widget elementor-widget-button"
-                    data-id="9a3d259"
-                    data-element_type="widget"
-                    data-widget_type="button.default"
-                  >
-                    <div class="elementor-widget-container">
-                      <div class="elementor-button-wrapper container">
-                        {/* <button class="elementor-button elementor-button-link elementor-size-sm"  target="_blank">
+                <div
+                  class="elementor-element elementor-element-1f4402a elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget elementor-widget-heading"
+                  data-id="1f4402a"
+                  data-element_type="widget"
+                  data-widget_type="heading.default"
+                >
+                  <div class="elementor-widget-container">
+                    <h3 class="elementor-heading-title elementor-size-default">
+                      Kindly input your API key below
+                    </h3>
+                    <div
+                      class="elementor-element elementor-element-9a3d259 elementor-widget__width-auto elementor-mobile-align-center elementor-widget-mobile__width-inherit elementor-align-left elementor-widget elementor-widget-button"
+                      data-id="9a3d259"
+                      data-element_type="widget"
+                      data-widget_type="button.default"
+                    >
+                      <div class="elementor-widget-container">
+                        <div class="elementor-button-wrapper container">
+                          {/* <button class="elementor-button elementor-button-link elementor-size-sm"  target="_blank">
                                           <span class="elementor-button-content-wrapper">
                                               <span class="elementor-button-icon elementor-align-icon-left">
                                                   <svg aria-hidden="true" class="e-font-icon-svg e-fab-chrome" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
@@ -133,37 +134,125 @@ const OpenAIKeyForm = ({ userId }) => {
                             </form>
                             {message && <p>{message}</p>}
                           </div>
-
+                        </div>
                       </div>
+                      <a
+                        className="return-homepage"
+                        href="https://socialscribe.aipoool.com/"
+                      >
+                        Return to Homepage
+                      </a>
                     </div>
-                    <a className="return-homepage" href="https://socialscribe.aipoool.com/">
-                      Return to Homepage
-                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="elementor-element elementor-element-f791ffd elementor-widget elementor-widget-spacer"
+                data-id="f791ffd"
+                data-element_type="widget"
+                data-widget_type="spacer.default"
+              >
+                <div class="elementor-widget-container">
+                  <div class="elementor-spacer">
+                    <div class="elementor-spacer-inner"></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div
-              class="elementor-element elementor-element-f791ffd elementor-widget elementor-widget-spacer"
-              data-id="f791ffd"
-              data-element_type="widget"
-              data-widget_type="spacer.default"
-            >
-              <div class="elementor-widget-container">
-                <div class="elementor-spacer">
-                  <div class="elementor-spacer-inner"></div>
+          </div>
+          <div
+            class="elementor-element elementor-element-3b42446 e-con-full e-flex e-con e-child"
+            data-id="3b42446"
+            data-element_type="container"
+          ></div>
+        </div>
+      </div>
+      <div
+        class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-3-cheavy ast-builder-grid-row-tablet-3-equal ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack snipcss-28lnc"
+        data-section="section-below-footer-builder"
+      >
+        <div class="ast-builder-grid-row-container-inner">
+          <div class="ast-builder-footer-grid-columns site-below-footer-inner-wrap ast-builder-grid-row">
+            <div class="site-footer-below-section-1 site-footer-section site-footer-section-1">
+              <div
+                class="footer-widget-area widget-area site-footer-focus-item ast-footer-html-1"
+                data-section="section-fb-html-1"
+              >
+                <div class="ast-header-html inner-link-style-">
+                  <div class="ast-builder-html-element">
+                    <p>
+                      <img
+                        class="size-full wp-image-1628"
+                        src="https://socialscribe.aipoool.com/wp-content/uploads/2024/05/AIpool-1.png"
+                        alt="footer logo"
+                        width="250"
+                        height="100"
+                      />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="site-footer-below-section-2 site-footer-section site-footer-section-2">
+              <div
+                class="ast-builder-layout-element ast-flex site-footer-focus-item ast-footer-copyright"
+                data-section="section-footer-builder"
+              >
+                <div class="ast-footer-copyright">
+                  <p>© 2024 SocialScribe. Powered by [aipoool].</p>
+                </div>
+              </div>
+            </div>
+            <div class="site-footer-below-section-3 site-footer-section site-footer-section-3">
+              <div
+                class="footer-widget-area widget-area site-footer-focus-item"
+                data-section="section-footer-menu"
+              >
+                <div class="footer-bar-navigation">
+                  <nav
+                    class="site-navigation ast-flex-grow-1 navigation-accessibility footer-navigation"
+                    id="footer-site-navigation"
+                    aria-label="Site Navigation: Footer - terms"
+                    itemtype="https://schema.org/SiteNavigationElement"
+                    itemscope="itemscope"
+                  >
+                    <div class="footer-nav-wrap">
+                      <ul
+                        id="astra-footer-menu"
+                        class="ast-nav-menu ast-flex astra-footer-horizontal-menu astra-footer-tablet-vertical-menu astra-footer-mobile-vertical-menu"
+                      >
+                        <li
+                          id="menu-item-808"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-808"
+                        >
+                          <a
+                            href="https://aipoool.com/terms-conditions/"
+                            class="menu-link"
+                          >
+                            Terms and Conditions
+                          </a>
+                        </li>
+                        <li
+                          id="menu-item-809"
+                          class="menu-item menu-item-type-custom menu-item-object-custom menu-item-809"
+                        >
+                          <a
+                            href="https://aipoool.com/privacy-policy/"
+                            class="menu-link"
+                          >
+                            Privacy Policy
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div
-          class="elementor-element elementor-element-3b42446 e-con-full e-flex e-con e-child"
-          data-id="3b42446"
-          data-element_type="container"
-        ></div>
       </div>
-    </div>
+    </>
   );
 };
 

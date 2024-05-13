@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import "../css/registeredUser.css";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
-import linkedInGIF from "../gif/LinkedIn GIF.gif";
+import linkedInGIF from "../gif/LinkedIn(Edited).gif";
 import XGIF from "../gif/X GIF.gif";
 import aboutusImg from "../image/about-us-img.png";
 import openSetting from "../image/open-settings-img.png";

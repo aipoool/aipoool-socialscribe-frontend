@@ -158,14 +158,22 @@ const RegisteredUser = ({ isNewUser = true }) => {
                         style={{ width: "100%", height: "auto" }}
                       />
                       <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">
+                          Revolutionize Your Online Presence: AI-Enhanced
+                          Interactions on LinkedIn
+                        </h5>
                         <p class="card-text">
-                          This is a wider card with supporting text below as a
-                          natural lead-in to additional content. This content is
-                          a little bit longer.
+                          Enhance your professional network with ease. Our
+                          chrome extension offers AI-generated responses that
+                          are tailored to your LinkedIn activity. Stand out in
+                          the crowd with insightful comments and
+                          thought-provoking posts.
                         </p>
-                        <button type="button" class="btn btn-primary">
-                          Primary
+                        <button
+                          style={{ width: "auto", height: "auto" }}
+                          onClick={redirectToLinkedIn}
+                        >
+                          Go to LinkedIn
                         </button>
                       </div>
                       {/* <div class="card-body">
@@ -187,14 +195,22 @@ const RegisteredUser = ({ isNewUser = true }) => {
                         style={{ width: "100%", height: "auto" }}
                       />
                       <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">
+                          Tweet Smarter, Not Harder: AI-Driven Creativity for
+                          Twitter
+                        </h5>
                         <p class="card-text">
-                          This is a wider card with supporting text below as a
-                          natural lead-in to additional content. This content is
-                          a little bit longer.
+                          Stay ahead of the curve with AI-assisted tweet
+                          crafting. Our chrome extension gives you the edge with
+                          responses that capture attention and spark
+                          conversations. Be the voice that stands out in the
+                          fast-paced world of Twitter.
                         </p>
-                        <button type="button" class="btn btn-primary">
-                          Primary
+                        <button
+                          style={{ width: "auto", height: "auto" }}
+                          onClick={redirectToX}
+                        >
+                          Go to X
                         </button>
                       </div>
                       {/* <div class="card-body">

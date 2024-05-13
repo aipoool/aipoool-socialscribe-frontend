@@ -8,6 +8,8 @@ import linkedInGIF from "../gif/LinkedIn(Edited-2).gif";
 import XGIF from "../gif/X(Edited).gif";
 import aboutusImg from "../image/about-us-img.png";
 import openSetting from "../image/open-settings-img.png";
+import linkedInImg from "../image/linkedIn-registered-2.png";
+import XImg from "../image/X-registered.png";
 
 var extensionId = "dnjmipaneoddchfeamgdabpiomihncii";
 
@@ -150,7 +152,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                   <div class="col">
                     <div class="card h-100">
                       <img
-                        src={linkedInGIF}
+                        src={linkedInImg}
                         class="card-img-top"
                         alt="..."
                         style={{ width: "100%", height: "auto" }}
@@ -179,7 +181,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                   <div class="col">
                     <div class="card h-100">
                       <img
-                        src={XGIF}
+                        src={XImg}
                         class="card-img-top"
                         alt="..."
                         style={{ width: "100%", height: "auto" }}

@@ -43,9 +43,9 @@ const Login = () => {
                   data-widget_type="heading.default"
                 >
                   <div class="elementor-widget-container">
-                    <h2 class="elementor-heading-title elementor-size-default">
+                    <h1 class="elementor-heading-title elementor-size-default">
                       Welcome to SocialScribe!
-                    </h2>
+                    </h1>
                     {/* <div class="elementor-element elementor-element-9a3d259 elementor-widget__width-auto elementor-mobile-align-center elementor-widget-mobile__width-inherit elementor-align-left elementor-widget elementor-widget-button" data-id="9a3d259" data-element_type="widget" data-widget_type="button.default"> */}
 
                     {/* <div class="elementor-widget-container">

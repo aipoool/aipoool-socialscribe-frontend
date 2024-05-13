@@ -1347,6 +1347,7 @@ html {
 }     
 
 .elementor-heading-title { 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 0; 
     margin: 0; 
     line-height: 1;

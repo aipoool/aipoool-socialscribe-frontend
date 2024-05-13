@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import "../css/registeredUser.css";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.css';
 import axios from "axios";
 import linkedInGIF from "../gif/LinkedIn GIF.gif";
 import XGIF from "../gif/X GIF.gif";

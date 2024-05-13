@@ -124,10 +124,10 @@ const RegisteredUser = ({ isNewUser = true }) => {
                   data-widget_type="heading.default"
                 >
                   <div class="elementor-widget-container">
-                    <h1 class="elementor-heading-title elementor-size-default">
+                    <h2 class="elementor-heading-title elementor-size-default">
                       {heading}
-                    </h1>
-                    <div width="10px"></div>
+                    </h2>
+                   
                     <p class="elementor-size-default">{para}</p>
                   </div>
                 </div>

@@ -154,20 +154,20 @@ const OpenAIKeyForm = ({ userId }) => {
                           />
                         </div>
 
-                        <input
+                        {/* <input
                           name="login"
                           id="login"
                           class="btn btn-block login-btn mb-4"
                           type="button"
-                          value={isSubmitting ? "Submitting..." : "Submit"}
-                        />
-                               {/* <button
+                          value="Submit"
+                        /> */}
+                               <button
                                 class="btn btn-block login-btn mb-4"
                                 type="submit"
                                 disabled={isSubmitting}
                               >
                                 {isSubmitting ? "Submitting..." : "Submit"}
-                              </button> */}
+                              </button>
                       </form>
                       <a href="#!" class="forgot-password-link">
                         Return to Homepage

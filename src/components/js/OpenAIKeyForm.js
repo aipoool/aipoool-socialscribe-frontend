@@ -162,7 +162,7 @@ const OpenAIKeyForm = ({ userId }) => {
                           value="Submit"
                         /> */}
                                <button
-                                className="buttonSubmit"
+                                class="btn btn-block login-btn mb-4"
                                 type="submit"
                                 disabled={isSubmitting}
                               >

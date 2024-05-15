@@ -169,7 +169,7 @@ const OpenAIKeyForm = ({ userId }) => {
                                 {isSubmitting ? "Submitting..." : "Submit"}
                               </button>
                       </form>
-                      <a href="#!" class="forgot-password-link">
+                      <a href="https://socialscribe.aipoool.com/" class="forgot-password-link">
                         Return to Homepage
                       </a>
                       <p class="login-card-footer-text">
@@ -179,8 +179,8 @@ const OpenAIKeyForm = ({ userId }) => {
                         </a>
                       </p>
                       <nav class="login-card-footer-nav">
-                        <a href="#!">Terms of use.</a>
-                        <a href="#!">Privacy policy</a>
+                        <a href="https://aipoool.com/terms-conditions/">Terms of use.</a>
+                        <a href="https://aipoool.com/privacy-policy/">Privacy policy</a>
                       </nav>
                     </div>
                   </div>

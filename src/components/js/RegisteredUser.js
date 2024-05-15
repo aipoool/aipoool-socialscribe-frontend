@@ -11,7 +11,7 @@ import openSetting from "../image/open-settings-img.png";
 import linkedInImg from "../image/linkedIn-registered-2.png";
 import XImg from "../image/X-registered.png";
 
-var extensionId = "dnjmipaneoddchfeamgdabpiomihncii";
+var extensionId = "bhnpbgfnodkiohanbolcdkibeibncobf";
 
 const RegisteredUser = ({ isNewUser = true }) => {
   const [userData, setUserdata] = useState({});

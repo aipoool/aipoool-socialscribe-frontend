@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../css/openaikeyform.css";
-import openAIKeyEnter from "../image/openAIKeyGen-page.png";
-import logoImage from "../logo/Icon social scribe (128 x 128 px).png";
 
 const OpenAIKeyForm = ({ userId }) => {
   const [openAIKey, setOpenAIKey] = useState("");
@@ -93,86 +91,9 @@ const OpenAIKeyForm = ({ userId }) => {
                   data-widget_type="heading.default"
                 >
                   <div class="elementor-widget-container">
-                    <h3 class="elementor-heading-title elementor-size-default">
+                    <h2 class="elementor-heading-title elementor-size-default">
                       Kindly input your API key below
-                    </h3>
-                    <div
-                      class="elementor-element elementor-element-9a3d259 elementor-widget__width-auto elementor-mobile-align-center elementor-widget-mobile__width-inherit elementor-align-left elementor-widget elementor-widget-button"
-                      data-id="9a3d259"
-                      data-element_type="widget"
-                      data-widget_type="button.default"
-                    >
-                      <div class="container snipcss-EmI9c">
-                        <div class="card login-card">
-                          <div class="row no-gutters">
-                            <div class="col-md-5">
-                              <img
-                                src={openAIKeyEnter}
-                                alt="login"
-                                class="login-card-img"
-                              />
-                            </div>
-                            <div class="col-md-7">
-                              <div class="card-body">
-                                <div class="brand-wrapper">
-                                  <img
-                                    src={logoImage}
-                                    alt="logo"
-                                    class="logo"
-                                  />
-                                </div>
-                                <p class="login-card-description">
-                                  Please enter your OpenAI Key{" "}
-                                </p>
-                                <form action="#!">
-                                  <div class="form-group">
-                                    <label for="email" class="sr-only">
-                                      Email
-                                    </label>
-                                    <input
-                                      type="email"
-                                      name="email"
-                                      id="email"
-                                      class="form-control"
-                                      placeholder="e.g. sk-proj-12345..."
-                                    />
-                                  </div>
-
-                                  <input
-                                    name="login"
-                                    id="login"
-                                    class="btn btn-block login-btn mb-4"
-                                    type="button"
-                                    value="Submit"
-                                  />
-                                </form>
-                                <a href="#!" class="forgot-password-link">
-                                  Return to Homepage
-                                </a>
-                                <p class="login-card-footer-text">
-                                  How to generate OpenAI Key?{" "}
-                                  <a href="#!" class="text-reset">
-                                    Click here
-                                  </a>
-                                </p>
-                                <nav class="login-card-footer-nav">
-                                  <a href="#!">Terms of use.</a>
-                                  <a href="#!">Privacy policy</a>
-                                </nav>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="spacing"></div>
-                      <a
-                        className="return-homepage"
-                        href="https://socialscribe.aipoool.com/"
-                      >
-                        Return to Homepage
-                      </a>
-                    </div>
+                    </h2>
                   </div>
                 </div>
               </div>
@@ -189,6 +110,81 @@ const OpenAIKeyForm = ({ userId }) => {
                 </div>
               </div>
             </div>
+            <div class="spacing"></div>
+
+              <div class="card login-card">
+                <div class="row no-gutters">
+                  <div class="col-md-5">
+                    <img
+                      src="https://demo.bootstrapdash.com/login-template-free-2/assets/images/login.jpg"
+                      alt="login"
+                      class="login-card-img"
+                    />
+                    <p class="text-white font-weight-medium text-center flex-grow align-self-end footer-link text-small">
+                      {" "}
+                      Free{" "}
+                      <a
+                        href="https://www.bootstrapdash.com/"
+                        target="_blank"
+                        class="text-white"
+                      >
+                        Bootstrap dashboard templates
+                      </a>{" "}
+                      from Bootstrapdash{" "}
+                    </p>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <div class="brand-wrapper">
+                        <img
+                          src="https://demo.bootstrapdash.com/login-template-free-2/assets/images/logo.svg"
+                          alt="logo"
+                          class="logo"
+                        />
+                      </div>
+                      <p class="login-card-description">
+                        Please enter your OpenAI Key{" "}
+                      </p>
+                      <form action="#!">
+                        <div class="form-group">
+                          <label for="email" class="sr-only">
+                            Email
+                          </label>
+                          <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            class="form-control"
+                            placeholder="e.g. sk-proj-12345..."
+                          />
+                        </div>
+
+                        <input
+                          name="login"
+                          id="login"
+                          class="btn btn-block login-btn mb-4"
+                          type="button"
+                          value="Submit"
+                        />
+                      </form>
+                      <a href="#!" class="forgot-password-link">
+                        Return to Homepage
+                      </a>
+                      <p class="login-card-footer-text">
+                        How to generate OpenAI Key?{" "}
+                        <a href="#!" class="text-reset">
+                          Click here
+                        </a>
+                      </p>
+                      <nav class="login-card-footer-nav">
+                        <a href="#!">Terms of use.</a>
+                        <a href="#!">Privacy policy</a>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
           </div>
           <div
             class="elementor-element elementor-element-3b42446 e-con-full e-flex e-con e-child"

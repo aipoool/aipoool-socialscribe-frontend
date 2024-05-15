@@ -174,7 +174,7 @@ const OpenAIKeyForm = ({ userId }) => {
                       </a>
                       <p class="login-card-footer-text">
                         How to generate OpenAI Key?{" "}
-                        <a href="#!" class="text-reset">
+                        <a href="https://socialscribe.aipoool.com/#OpenAI" class="text-reset">
                           Click here
                         </a>
                       </p>

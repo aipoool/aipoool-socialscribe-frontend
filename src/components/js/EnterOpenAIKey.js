@@ -11,7 +11,6 @@ const EnterOpenAIKey = () => {
   //const userEmail = userdata.email;
   const id = userdata._id;
 
-  console.log("Enter OpenAI Key Page with id : ", id);
 
   const fetchSessionData = async () => {
     try {
@@ -20,7 +19,6 @@ const EnterOpenAIKey = () => {
         { withCredentials: true }
       );
       setUserdata(response.data.user);
-      console.log("Response from EnterOpenAIKey.js : ", response.data.user);
     } catch (error) {
       console.log("error", error);
     }

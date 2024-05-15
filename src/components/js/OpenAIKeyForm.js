@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../css/openaikeyform.css";
+import openAIKeyEnter from "../image/openAIKeyGen-page.png";
+import logoImage from "../logo/Icon social scribe (128 x 128 px).png";
 
 const OpenAIKeyForm = ({ userId }) => {
   const [openAIKey, setOpenAIKey] = useState("");
@@ -112,7 +114,7 @@ const OpenAIKeyForm = ({ userId }) => {
                                               <span class="elementor-button-text">Sign in With Google</span>
                                           </span>
                                       </button> */}
-                          <div class="card">
+                          {/* <div class="card">
                             <form onSubmit={handleSubmit}>
                               <input
                                 id="openai-key-input"
@@ -133,6 +135,69 @@ const OpenAIKeyForm = ({ userId }) => {
                               </button>
                             </form>
                             {message && <p>{message}</p>}
+                          </div> */}
+
+                          <div class="container snipcss-EmI9c">
+                            <div class="card login-card">
+                              <div class="row no-gutters">
+                                <div class="col-md-5">
+                                  <img
+                                    src={openAIKeyEnter}
+                                    alt="login"
+                                    class="login-card-img"
+                                  />
+                                </div>
+                                <div class="col-md-7">
+                                  <div class="card-body">
+                                    <div class="brand-wrapper">
+                                      <img
+                                        src={logoImage}
+                                        alt="logo"
+                                        class="logo"
+                                      />
+                                    </div>
+                                    <p class="login-card-description">
+                                      Please enter your OpenAI Key{" "}
+                                    </p>
+                                    <form action="#!">
+                                      <div class="form-group">
+                                        <label for="email" class="sr-only">
+                                          Email
+                                        </label>
+                                        <input
+                                          type="email"
+                                          name="email"
+                                          id="email"
+                                          class="form-control"
+                                          placeholder="e.g. sk-proj-12345..."
+                                        />
+                                      </div>
+
+                                      <input
+                                        name="login"
+                                        id="login"
+                                        class="btn btn-block login-btn mb-4"
+                                        type="button"
+                                        value="Submit"
+                                      />
+                                    </form>
+                                    <a href="#!" class="forgot-password-link">
+                                      Return to Homepage
+                                    </a>
+                                    <p class="login-card-footer-text">
+                                      How to generate OpenAI Key?{" "}
+                                      <a href="#!" class="text-reset">
+                                        Click here
+                                      </a>
+                                    </p>
+                                    <nav class="login-card-footer-nav">
+                                      <a href="#!">Terms of use.</a>
+                                      <a href="#!">Privacy policy</a>
+                                    </nav>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>

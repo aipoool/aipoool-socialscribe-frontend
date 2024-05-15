@@ -26,8 +26,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
         { withCredentials: true }
       );
       setUserdata(response.data.user);
-      console.log("login success with data: ", response.data);
-      console.log("Response from Header.js : ", response.data.user);
+
     } catch (error) {
       console.log("error", error);
     }

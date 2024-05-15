@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../css/openaikeyform.css";
+import openAIKeyImg from "../image/openAIKeyGen-page.png";
+import logoImg from "../logo/Icon social scribe (128 x 128 px).png"
 
 const OpenAIKeyForm = ({ userId }) => {
   const [openAIKey, setOpenAIKey] = useState("");
@@ -116,28 +118,17 @@ const OpenAIKeyForm = ({ userId }) => {
                 <div class="row no-gutters">
                   <div class="col-md-5">
                     <img
-                      src="https://demo.bootstrapdash.com/login-template-free-2/assets/images/login.jpg"
+                      src={openAIKeyImg}
                       alt="login"
                       class="login-card-img"
                     />
-                    <p class="text-white font-weight-medium text-center flex-grow align-self-end footer-link text-small">
-                      {" "}
-                      Free{" "}
-                      <a
-                        href="https://www.bootstrapdash.com/"
-                        target="_blank"
-                        class="text-white"
-                      >
-                        Bootstrap dashboard templates
-                      </a>{" "}
-                      from Bootstrapdash{" "}
-                    </p>
+
                   </div>
                   <div class="col-md-7">
                     <div class="card-body">
                       <div class="brand-wrapper">
                         <img
-                          src="https://demo.bootstrapdash.com/login-template-free-2/assets/images/logo.svg"
+                          src={logoImg}
                           alt="logo"
                           class="logo"
                         />
@@ -145,27 +136,38 @@ const OpenAIKeyForm = ({ userId }) => {
                       <p class="login-card-description">
                         Please enter your OpenAI Key{" "}
                       </p>
-                      <form action="#!">
+                      <form onSubmit={handleSubmit}>
                         <div class="form-group">
                           <label for="email" class="sr-only">
                             Email
                           </label>
                           <input
-                            type="email"
+                            type="text"
                             name="email"
                             id="email"
+                            value={openAIKey}
+                            onChange={(e) => {
+                              setOpenAIKey(e.target.value);
+                            }}
                             class="form-control"
                             placeholder="e.g. sk-proj-12345..."
                           />
                         </div>
 
-                        <input
+                        {/* <input
                           name="login"
                           id="login"
                           class="btn btn-block login-btn mb-4"
                           type="button"
                           value="Submit"
-                        />
+                        /> */}
+                               <button
+                                className="buttonSubmit"
+                                type="submit"
+                                disabled={isSubmitting}
+                              >
+                                {isSubmitting ? "Submitting..." : "Submit"}
+                              </button>
                       </form>
                       <a href="#!" class="forgot-password-link">
                         Return to Homepage

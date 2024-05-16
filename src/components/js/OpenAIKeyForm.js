@@ -11,12 +11,29 @@ const OpenAIKeyForm = ({ userId }) => {
   const [message, setMessage] = useState("");
   const history = useNavigate();
 
+  async function checkApiKeyAuthorizationAsync(secretKey) {
+    try {
+      const response = await axios.get('https://api.openai.com/v1/engines', {
+        headers: { 'Authorization': `Bearer ${secretKey}` }
+      });
+      return response.status === 200;
+    } catch (error) {
+      return false;
+    }
+  }
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const keyFormat = /^sk-proj-[a-zA-Z0-9]{20}T3BlbkFJ[a-zA-Z0-9]{20}$/;
+
+    // Check if the format of OpenAI Key ie valid or not
     if (!keyFormat.test(openAIKey)) {
       alert("Invalid OpenAI Key format. Please enter again.");
+      return;
+    }
+    if (!await checkApiKeyAuthorizationAsync(openAIKey)) {
+      alert('Unauthorized API key.Please enter an authorized API key!');
       return;
     }
 

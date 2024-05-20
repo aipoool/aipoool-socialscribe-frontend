@@ -25,7 +25,7 @@ const OpenAIKeyForm = ({ userId }) => {
 
   async function isKeyValid(secretKey) {
     try{
-      const response = await axios.post('https://aipoool-socialscribe-backend.onrender.com/api/check', {
+      const response = await axios.post("https://aipoool-socialscribe-backend.onrender.com/api/check", {
         secretKey
       });
       console.log(response); 

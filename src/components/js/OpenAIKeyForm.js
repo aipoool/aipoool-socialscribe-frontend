@@ -46,7 +46,7 @@ const OpenAIKeyForm = ({ userId }) => {
       return;
     }
     if (!await isKeyValid(openAIKey)) {
-      alert('Unauthorized API key.Please enter an authorized API key!');
+      alert('Unauthorized API key. Please enter an authorized API key!');
       return;
     }
 

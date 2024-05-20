@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../css/openaikeyform.css";
-import openAIKeyImg from "../image/openAIKeyGen-page.png";
+import {Cloudinary} from "@cloudinary/url-gen";
+import {AdvancedImage} from '@cloudinary/react';
 import logoImg from "../logo/Icon social scribe (128 x 128 px).png"
 
 const OpenAIKeyForm = ({ userId }) => {
@@ -21,6 +22,14 @@ const OpenAIKeyForm = ({ userId }) => {
       return false;
     }
   }
+
+  const cloud = new Cloudinary({
+    cloud: {
+      cloudName: 'dcuecnxx4'
+    }
+  });
+
+  const openAIKeyImg = cloud.image('aipoool-socialscribe-frontend/openAIkeygen');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -134,11 +143,7 @@ const OpenAIKeyForm = ({ userId }) => {
               <div class="card login-card">
                 <div class="row no-gutters">
                   <div class="col-md-5">
-                    <img
-                      src={openAIKeyImg}
-                      alt="login"
-                      class="login-card-img"
-                    />
+                  <AdvancedImage cldImg={openAIKeyImg} alt="login" class="login-card-img"/>
 
                   </div>
                   <div class="col-md-7">

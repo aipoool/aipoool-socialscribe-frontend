@@ -4,12 +4,8 @@ import { Helmet } from "react-helmet";
 import "../css/registeredUser.css";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
-import linkedInGIF from "../gif/LinkedIn(Edited-2).gif";
-import XGIF from "../gif/X(Edited).gif";
-import aboutusImg from "../image/about-us-img.png";
-import openSetting from "../image/open-settings-img.png";
-import linkedInImg from "../image/linkedIn-registered-2.png";
-import XImg from "../image/X-registered.png";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
 
 var extensionId = "bhnpbgfnodkiohanbolcdkibeibncobf";
 
@@ -26,11 +22,24 @@ const RegisteredUser = ({ isNewUser = true }) => {
         { withCredentials: true }
       );
       setUserdata(response.data.user);
-
     } catch (error) {
       console.log("error", error);
     }
   };
+
+  const cloud = new Cloudinary({
+    cloud: {
+      cloudName: "dcuecnxx4",
+    },
+  });
+  const aboutusImg = cloud.image("aipoool-socialscribe-frontend/about-us");
+  const openSetting = cloud.image(
+    "aipoool-socialscribe-frontend/open-settings"
+  );
+  const linkedInImg = cloud.image(
+    "aipoool-socialscribe-frontend/LinkedIn-registered"
+  );
+  const XImg = cloud.image("aipoool-socialscribe-frontend/X-registered");
 
   useEffect(() => {
     getUser();
@@ -126,7 +135,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
                     <h2 class="elementor-heading-title elementor-size-default">
                       {heading}
                     </h2>
-                   
+
                     <p class="elementor-size-default">{para}</p>
                   </div>
                 </div>
@@ -151,8 +160,8 @@ const RegisteredUser = ({ isNewUser = true }) => {
                 <div class="row row-cols-1 row-cols-md-2 g-4">
                   <div class="col">
                     <div class="card h-100">
-                      <img
-                        src={linkedInImg}
+                      <AdvancedImage
+                        cldImg={linkedInImg}
                         class="card-img-top"
                         alt="..."
                         style={{ width: "100%", height: "auto" }}
@@ -188,8 +197,8 @@ const RegisteredUser = ({ isNewUser = true }) => {
                   </div>
                   <div class="col">
                     <div class="card h-100">
-                      <img
-                        src={XImg}
+                      <AdvancedImage
+                        cldImg={XImg}
                         class="card-img-top"
                         alt="..."
                         style={{ width: "100%", height: "auto" }}
@@ -213,75 +222,17 @@ const RegisteredUser = ({ isNewUser = true }) => {
                           Go to X
                         </button>
                       </div>
-                      {/* <div class="card-body">
-                        <button
-                          style={{ width: "auto", height: "auto" }}
-                          onClick={redirectToX}
-                        >
-                          Go to X
-                        </button>
-                      </div> */}
                     </div>
                   </div>
                 </div>
-
-                {/* <div class="container">
-                      <div class="card-deck row">
-                        <div class="col-sm-6 col-md-6">
-                          <div class="card">
-                            <div class="view overlay">
-                              <img
-                                class="card-img-top"
-                                src={linkedInGIF}
-                                alt="Card image cap"
-                              />
-                              <a href="#!">
-                                <div class="mask rgba-white-slight"></div>
-                              </a>
-                            </div>
-
-                            <div class="card-body">
-                            <button onClick={redirectToLinkedIn}>
-                            Go to LinkedIn
-                          </button>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-6">
-                          <div class="card mb-4">
-                            <div class="view overlay">
-                              <img
-                                class="card-img-top"
-                                src={XGIF}
-                                alt="Card image cap"
-                              />
-                              <a href="#!">
-                                <div class="mask rgba-white-slight"></div>
-                              </a>
-                            </div>
-
-                            <div class="card-body">
-                            <button onClick={redirectToX}>Go to X</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div> */}
-
-                {/* <button onClick={redirectToLinkedIn}>
-                            Go to LinkedIn
-                          </button>
-
-                          <button onClick={redirectToX}>Go to X</button> */}
               </>
             ) : (
               <>
                 <div class="row row-cols-1 row-cols-md-2 g-4">
                   <div class="col">
                     <div class="card mb-3">
-                      <img
-                        src={aboutusImg}
+                      <AdvancedImage
+                        cldImg={aboutusImg}
                         class="card-img-top"
                         alt="..."
                         style={{ width: "100%", height: "auto" }}
@@ -307,25 +258,17 @@ const RegisteredUser = ({ isNewUser = true }) => {
                           About Us
                         </button>
                       </div>
-
-                      {/* <div class="card-body">
-                        <button
-                          style={{ width: "auto", height: "auto" }}
-                          onClick={aboutSocialScribe}
-                        >
-                          About Us
-                        </button>
-                      </div> */}
                     </div>
                   </div>
                   <div class="col">
                     <div class="card mb-3">
-                      <img
-                        src={openSetting}
+                      <AdvancedImage
+                        cldImg={openSetting}
                         class="card-img-top"
                         alt="..."
                         style={{ width: "100%", height: "auto" }}
                       />
+
                       <div class="card-img-overlay">
                         <h5 class="card-title">Customize Your Experience</h5>
                         <p class="card-text">
@@ -338,58 +281,10 @@ const RegisteredUser = ({ isNewUser = true }) => {
                           Open Settings
                         </button>
                       </div>
-                      {/* <div class="card-body">
-                        <button
-                          style={{ width: "auto", height: "auto" }}
-                          onClick={openSettings}
-                        >
-                          Open Settings
-                        </button>
-                      </div> */}
+
                     </div>
                   </div>
                 </div>
-
-                {/* <div class="card-deck">
-                    <div class="card bg-dark text-white">
-                      <img
-                        class="card-img"
-                        src="https://i0.wp.com/www.galvanizeaction.org/wp-content/uploads/2022/06/Wow-gif.gif?fit=450%2C250&ssl=1"
-                        alt="Card image"
-                        style={{ width: "100%", height: "auto" }}
-                      />
-                      <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                          This is a wider card with supporting text below as a
-                          natural lead-in to additional content. This content is
-                          a little bit longer.
-                        </p>
-                        <button type="button" class="btn btn-primary">
-                          Primary
-                        </button>
-                      </div>
-                    </div>
-                    <div class="card bg-dark text-white">
-                      <img
-                        class="card-img"
-                        src="https://i0.wp.com/www.galvanizeaction.org/wp-content/uploads/2022/06/Wow-gif.gif?fit=450%2C250&ssl=1"
-                        alt="Card image"
-                        style={{ width: "100%", height: "auto" }}
-                      />
-                      <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                          This is a wider card with supporting text below as a
-                          natural lead-in to additional content. This content is
-                          a little bit longer.
-                        </p>
-                        <button type="button" class="btn btn-primary">
-                          Primary
-                        </button>
-                      </div>
-                    </div>
-                  </div> */}
               </>
             )}
           </div>

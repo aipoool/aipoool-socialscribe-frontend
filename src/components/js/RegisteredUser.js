@@ -78,7 +78,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
   const openSettings = () => {
     // Add your open settings logic here
     window.location.href =
-      "chrome-extension://dnjmipaneoddchfeamgdabpiomihncii/assets/settings.html";
+      "chrome-extension://bhnpbgfnodkiohanbolcdkibeibncobf/assets/settings.html";
   };
 
   return (

@@ -11,8 +11,6 @@ var extensionId = "bhnpbgfnodkiohanbolcdkibeibncobf";
 
 const RegisteredUser = ({ isNewUser = true }) => {
   const [userData, setUserdata] = useState({});
-  console.log("Header response", userData);
-  console.log("User Email", userData.email);
 
   // Getting the user details here so that we won't have to call it again and again
   const getUser = async () => {

@@ -48,7 +48,6 @@ const OpenAIKeyForm = ({ userId }) => {
 
     setIsSubmitting(true);
     try {
-      //console.log("User Id: ", userId);
       const response = await axios.post(
         "https://aipoool-socialscribe-backend.onrender.com/auth/enter-your-key/success",
         {
@@ -57,7 +56,6 @@ const OpenAIKeyForm = ({ userId }) => {
         },
         { withCredentials: true }
       );
-      //console.log(response.data.id, response.data.openAIKey);
 
       setMessage("Key updated successfully!");
       history("/registered");

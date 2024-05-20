@@ -23,6 +23,19 @@ const OpenAIKeyForm = ({ userId }) => {
     }
   }
 
+  async function isKeyValid(secretKey) {
+    try{
+      const response = await axios.post('https://aipoool-socialscribe-backend.onrender.com/api/check', {
+        secretKey
+      });
+      console.log(response); 
+      console.log(response.data); 
+      return response.data;
+    }catch (error) {
+      return false; 
+    }
+  }
+
   const cloud = new Cloudinary({
     cloud: {
       cloudName: 'dcuecnxx4'
@@ -41,7 +54,7 @@ const OpenAIKeyForm = ({ userId }) => {
       alert("Invalid OpenAI Key format. Please enter again.");
       return;
     }
-    if (!await checkApiKeyAuthorizationAsync(openAIKey)) {
+    if (!await isKeyValid(openAIKey)) {
       alert('Unauthorized API key.Please enter an authorized API key!');
       return;
     }

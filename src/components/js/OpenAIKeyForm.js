@@ -12,16 +12,6 @@ const OpenAIKeyForm = ({ userId }) => {
   const [message, setMessage] = useState("");
   const history = useNavigate();
 
-  async function checkApiKeyAuthorizationAsync(secretKey) {
-    try {
-      const response = await axios.get('https://api.openai.com/v1/engines', {
-        headers: { 'Authorization': `Bearer ${secretKey}` }
-      });
-      return response.status === 200;
-    } catch (error) {
-      return false;
-    }
-  }
 
   async function isKeyValid(secretKey) {
     try{

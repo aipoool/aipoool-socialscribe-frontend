@@ -6,6 +6,10 @@ import { loadStripe } from "@stripe/stripe-js";
 
 const paymentlanding = () => {
   /** GET THE USER DATA FROM THE SOURCE AND ADD EMAIL TO THE BODY TO HARDCODE IT IN THE BLANK */
+  chrome.storage.sync.get(['userDataForPayment'], function(result) {
+    console.log('Data retrieved from Chrome storage is ' + result.userDataForPayment);
+    // Now you can use result.key in your payment procedures
+});
   
   async function makePayment(planType) {
     const stripe = await loadStripe(
@@ -13,10 +17,7 @@ const paymentlanding = () => {
     );
 
     // Get the data 
-    chrome.storage.sync.get(['userDataForPayment'], function(result) {
-      console.log('Data retrieved from Chrome storage is ' + result.userDataForPayment);
-      // Now you can use result.key in your payment procedures
-  });
+
 
     let planPay, price;
     if (planType === "free") {

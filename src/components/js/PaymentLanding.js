@@ -6,15 +6,12 @@ import { loadStripe } from "@stripe/stripe-js";
 
 const paymentlanding = () => {
   /** GET THE USER DATA FROM THE SOURCE AND ADD EMAIL TO THE BODY TO HARDCODE IT IN THE BLANK */
-
+  
   // Get the data from the content-script 
-  chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-      console.log("Data from content script to the Payment page ::::: "); 
-      console.log(request.userdata); 
+  chrome.storage.session.get(["userdataToPayment"]).then((result) => {
+    console.log("Value is " + result.userdataToPayment);
+  });
 
-    }
-  );
   async function makePayment(planType) {
     const stripe = await loadStripe(
       'pk_test_51NkpdNSGYG2CnOjscEUK9B0JfqNSzZEqj1GXLZEHPJrzCGPfTDv2DnleEid0HVNvmlf0qUVjNFTRV3UzpAsucioU00Kthd5o4Z'

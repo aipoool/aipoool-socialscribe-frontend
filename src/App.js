@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Headers from "./components/js/Header";
 import PayLanding from "./components/js/PaymentLanding";
-import Success from "./components/js/Success;"
+import Success from "./components/js/Success"
 import Cancel from "./components/js/Cancel";
 import Login from "./components/js/Login";
 import EnterOpenAIKey from "./components/js/EnterOpenAIKey";

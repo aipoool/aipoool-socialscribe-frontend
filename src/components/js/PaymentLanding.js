@@ -139,6 +139,7 @@ const paymentlanding = () => {
           </div>
         </div>
       </div>
+      <div className="footer">
       <div
         class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-3-cheavy ast-builder-grid-row-tablet-3-equal ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack snipcss-YE11r"
         data-section="section-below-footer-builder"
@@ -224,6 +225,8 @@ const paymentlanding = () => {
           </div>
         </div>
       </div>
+      </div>
+
     </>
   );
 };

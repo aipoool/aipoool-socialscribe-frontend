@@ -536,7 +536,7 @@ html {
 
   .elementor-element.elementor-element-9e0036e  { 
     --display: flex; 
-    --min-height: 833px; 
+    --min-height: 900px; 
     --flex-direction: row; 
     --container-widget-width: calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% ); 
     --container-widget-height: 100%; 

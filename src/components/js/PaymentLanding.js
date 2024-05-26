@@ -69,117 +69,71 @@ const paymentlanding = () => {
         data-element_type="container"
         data-settings='{"background_background":"classic"}'
       >
-        <div class="e-con-inner">
-          <div
-            class="elementor-element elementor-element-ed79abc e-con-full e-flex e-con e-child"
-            data-id="ed79abc"
-            data-element_type="container"
-          >
-            <div
-              class="elementor-element elementor-element-597b965 e-con-full e-flex e-con e-child"
-              data-id="597b965"
-              data-element_type="container"
-            >
-              <div
-                class="elementor-element elementor-element-11d9bb4 e-con-full e-flex e-con e-child"
-                data-id="11d9bb4"
-                data-element_type="container"
-              >
-                <div
-                  class="elementor-element elementor-element-1f4402a elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget elementor-widget-heading"
-                  data-id="1f4402a"
-                  data-element_type="widget"
-                  data-widget_type="heading.default"
-                >
-                  <div class="elementor-widget-container">
-                    <h1 class="elementor-heading-title elementor-size-default">
-                      Welcome to SocialScribe!
-                    </h1>
-                  </div>
+        <div class="containercard snipcss-iaZTI">
+          <h5 class="text-center pricing-table-subtitle">PRICING PLAN</h5>
+          <h1 class="text-center pricing-table-title">Pricing Table</h1>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card pricing-card pricing-plan-basic">
+                <div class="card-body">
+                  <i class="mdi mdi-cube-outline pricing-plan-icon"></i>
+                  <p class="pricing-plan-title">Basic</p>
+                  <h3 class="pricing-plan-cost ml-auto">FREE</h3>
+                  <ul class="pricing-plan-features">
+                    <li>Unlimited conferences</li>
+                    <li>100 participants max</li>
+                    <li>Custom Hold Music</li>
+                    <li>10 participants max</li>
+                  </ul>
+                  <button
+                    class="btn pricing-plan-purchase-btn"
+                    onClick={() => makePayment("free")}
+                  >
+                    Free
+                  </button>
                 </div>
               </div>
             </div>
-            <div class="spacing"></div>
-
-            <div class="container snipcss-iaZTI">
-              <h5 class="text-center pricing-table-subtitle">PRICING PLAN</h5>
-              <h1 class="text-center pricing-table-title">Pricing Table</h1>
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="card pricing-card pricing-plan-basic">
-                    <div class="card-body">
-                      <i class="mdi mdi-cube-outline pricing-plan-icon"></i>
-                      <p class="pricing-plan-title">Basic</p>
-                      <h3 class="pricing-plan-cost ml-auto">FREE</h3>
-                      <ul class="pricing-plan-features">
-                        <li>Unlimited conferences</li>
-                        <li>100 participants max</li>
-                        <li>Custom Hold Music</li>
-                        <li>10 participants max</li>
-                      </ul>
-                      <button
-                        class="btn pricing-plan-purchase-btn"
-                        onClick={() => makePayment("free")}
-                      >
-                        Free
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="card pricing-card pricing-card-highlighted  pricing-plan-pro">
-                    <div class="card-body">
-                      <i class="mdi mdi-trophy pricing-plan-icon"></i>
-                      <p class="pricing-plan-title">Pro</p>
-                      <h3 class="pricing-plan-cost ml-auto">$49</h3>
-                      <ul class="pricing-plan-features">
-                        <li>Unlimited conferences</li>
-                        <li>100 participants max</li>
-                        <li>Custom Hold Music</li>
-                        <li>10 participants max</li>
-                      </ul>
-                      <button
-                        class="btn pricing-plan-purchase-btn"
-                        onClick={() => makePayment("premium")}
-                      >
-                        Premium
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="card pricing-card pricing-plan-enterprise">
-                    <div class="card-body">
-                      <i class="mdi mdi-wallet-giftcard pricing-plan-icon"></i>
-                      <p class="pricing-plan-title">Enterprise</p>
-                      <h3 class="pricing-plan-cost ml-auto">$69</h3>
-                      <ul class="pricing-plan-features">
-                        <li>Unlimited conferences</li>
-                        <li>100 participants max</li>
-                        <li>Custom Hold Music</li>
-                        <li>10 participants max</li>
-                      </ul>
-                      <button
-                        class="btn pricing-plan-purchase-btn"
-                        onClick={() => makePayment("pro")}
-                      >
-                        Pro
-                      </button>
-                    </div>
-                  </div>
+            <div class="col-md-4">
+              <div class="card pricing-card pricing-card-highlighted  pricing-plan-pro">
+                <div class="card-body">
+                  <i class="mdi mdi-trophy pricing-plan-icon"></i>
+                  <p class="pricing-plan-title">Pro</p>
+                  <h3 class="pricing-plan-cost ml-auto">$49</h3>
+                  <ul class="pricing-plan-features">
+                    <li>Unlimited conferences</li>
+                    <li>100 participants max</li>
+                    <li>Custom Hold Music</li>
+                    <li>10 participants max</li>
+                  </ul>
+                  <button
+                    class="btn pricing-plan-purchase-btn"
+                    onClick={() => makePayment("premium")}
+                  >
+                    Premium
+                  </button>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            class="elementor-element elementor-element-f791ffd elementor-widget elementor-widget-spacer"
-            data-id="f791ffd"
-            data-element_type="widget"
-            data-widget_type="spacer.default"
-          >
-            <div class="elementor-widget-container">
-              <div class="elementor-spacer">
-                <div class="elementor-spacer-inner"></div>
+            <div class="col-md-4">
+              <div class="card pricing-card pricing-plan-enterprise">
+                <div class="card-body">
+                  <i class="mdi mdi-wallet-giftcard pricing-plan-icon"></i>
+                  <p class="pricing-plan-title">Enterprise</p>
+                  <h3 class="pricing-plan-cost ml-auto">$69</h3>
+                  <ul class="pricing-plan-features">
+                    <li>Unlimited conferences</li>
+                    <li>100 participants max</li>
+                    <li>Custom Hold Music</li>
+                    <li>10 participants max</li>
+                  </ul>
+                  <button
+                    class="btn pricing-plan-purchase-btn"
+                    onClick={() => makePayment("pro")}
+                  >
+                    Pro
+                  </button>
+                </div>
               </div>
             </div>
           </div>

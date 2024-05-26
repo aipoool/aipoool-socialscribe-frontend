@@ -1,3 +1,4 @@
+/* global chrome */
 import React from "react";
 import "../css/landing.css";
 import axios from "axios";
@@ -5,9 +6,18 @@ import { loadStripe } from "@stripe/stripe-js";
 
 const paymentlanding = () => {
   /** GET THE USER DATA FROM THE SOURCE AND ADD EMAIL TO THE BODY TO HARDCODE IT IN THE BLANK */
+
+  // Get the data from the content-script 
+  chrome.runtime.onMessage.addListener(
+    function(request, sender, sendResponse) {
+      console.log("Data from content script to the Payment page ::::: "); 
+      console.log(request.userdata); 
+
+    }
+  );
   async function makePayment(planType) {
     const stripe = await loadStripe(
-      "pk_test_51NkpdNSGYG2CnOjscEUK9B0JfqNSzZEqj1GXLZEHPJrzCGPfTDv2DnleEid0HVNvmlf0qUVjNFTRV3UzpAsucioU00Kthd5o4Z"
+      'pk_test_51NkpdNSGYG2CnOjscEUK9B0JfqNSzZEqj1GXLZEHPJrzCGPfTDv2DnleEid0HVNvmlf0qUVjNFTRV3UzpAsucioU00Kthd5o4Z'
     );
     let planPay, price;
     if (planType === "free") {
@@ -34,8 +44,8 @@ const paymentlanding = () => {
           plan: planPay,
           type: planType,
           price: price,
-          userEmail: "frosticpanda9ae23@gmail.com",
-          userId: "664e0d668d57494e9cd43559",
+          userEmail: "ahmed.kaif.0603@gmail.com",
+          userId: "6653238db46d7bded020ac3b",
         },
       },
       { withCredentials: true }

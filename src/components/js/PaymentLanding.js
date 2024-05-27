@@ -13,10 +13,10 @@ const PaymentLanding = () => {
         "https://aipoool-socialscribe-backend.onrender.com/get-user-data",
         { withCredentials: true }
       );
-      if (response.status === 200 || response.status === 302) {
-        console.log(response); 
-        console.log(response.user); 
-        //setUserdata(response.data.user);
+      if (response.status === 200 || response.status === 302) { 
+        console.log(response.data.user); 
+        console.log(`${response.data.user.email} :::::: ${response.data.user._id}`); 
+        setUserdata(response.data.user);
       }
     } catch (error) {
       if (error.response && error.response.status === 401) {
@@ -63,8 +63,8 @@ const PaymentLanding = () => {
           plan: planPay,
           type: planType,
           price: price,
-          userEmail: "ahmed.kaif.0603@gmail.com",
-          userId: "6653238db46d7bded020ac3b",
+          userEmail: userdata.email,
+          userId: userdata._id,
         },
       },
       { withCredentials: true }

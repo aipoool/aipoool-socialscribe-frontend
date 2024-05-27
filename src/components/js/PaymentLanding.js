@@ -7,7 +7,7 @@ import { loadStripe } from "@stripe/stripe-js";
 const PaymentLanding = () => {
   const [userdata, setUserdata] = useState({});
 
-  const fetchSessionData = async () => {
+  const fetchData = async () => {
     try {
       const response = await axios.get(
         "https://aipoool-socialscribe-backend.onrender.com/get-user-data",
@@ -28,7 +28,7 @@ const PaymentLanding = () => {
   };
   
   useEffect(() => {
-    fetchSessionData();
+    fetchData();
   }, []);
 
   async function makePayment(planType) {
@@ -70,9 +70,6 @@ const PaymentLanding = () => {
       { withCredentials: true }
     );
 
-    console.log(response);
-    console.log(response.data.redirectUrl);
-    console.log(response.config.data);
 
     if (response.data && response.data.redirectUrl) {
       window.location.href = response.data.redirectUrl; // rediret the user to billing portal if already subscribed

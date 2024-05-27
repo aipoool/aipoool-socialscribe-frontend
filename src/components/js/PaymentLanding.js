@@ -57,7 +57,7 @@ const PaymentLanding = () => {
 
     // Call the userdata and send the email and id via the body
     const response = await axios.post(
-      "http://localhost:1997/api/create-checkout-session",
+      "https://aipoool-socialscribe-backend.onrender.com/api/create-checkout-session",
       {
         data: {
           plan: planPay,

@@ -13,12 +13,18 @@ const PaymentLanding = () => {
         "http://localhost:1997/get-user-data",
         { withCredentials: true }
       );
-      setUserdata(response.data.user);
+      if (response.status === 200) {
+        setUserdata(response.data.user);
+      }
     } catch (error) {
-      console.log("error", error);
+      if (error.response && error.response.status === 401) {
+        window.location.href = 'https://socialscribe-aipoool.onrender.com/login';
+      } else {
+        console.log("error", error);
+      }
     }
   };
-
+  
   useEffect(() => {
     fetchSessionData();
   }, []);

@@ -14,6 +14,7 @@ const PaymentLanding = () => {
         { withCredentials: true }
       );
       if (response.status === 200 || response.status === 302) {
+        console.log(response); 
         console.log(response.user); 
         //setUserdata(response.data.user);
       }

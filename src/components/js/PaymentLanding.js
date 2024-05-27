@@ -1,11 +1,27 @@
 /* global chrome */
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../css/landing.css";
 import axios from "axios";
 import { loadStripe } from "@stripe/stripe-js";
 
-const paymentlanding = () => {
-  /** GET THE USER DATA FROM THE SOURCE AND ADD EMAIL TO THE BODY TO HARDCODE IT IN THE BLANK */
+const PaymentLanding = () => {
+  const [userdata, setUserdata] = useState({});
+
+  const fetchSessionData = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:1997/get-user-data",
+        { withCredentials: true }
+      );
+      setUserdata(response.data.user);
+    } catch (error) {
+      console.log("error", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchSessionData();
+  }, []);
 
   async function makePayment(planType) {
     const stripe = await loadStripe(
@@ -13,11 +29,6 @@ const paymentlanding = () => {
     );
 
     // Get the data
-    const userdata = await axios.get(
-      "http://localhost:1997/get-user-data",
-      { withCredentials: true }
-    );
-
     console.log(userdata); 
 
     let planPay, price;
@@ -241,4 +252,4 @@ const paymentlanding = () => {
   );
 };
 
-export default paymentlanding;
+export default PaymentLanding;

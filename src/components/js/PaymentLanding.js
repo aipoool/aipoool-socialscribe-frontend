@@ -14,7 +14,7 @@ const paymentlanding = () => {
 
     // Get the data
     const userdata = await axios.get(
-      "https://aipoool-socialscribe-backend.onrender.com/get-user-data",
+      "http://localhost:1997/get-user-data",
       { withCredentials: true }
     );
 

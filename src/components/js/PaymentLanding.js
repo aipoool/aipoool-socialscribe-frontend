@@ -13,28 +13,12 @@ const paymentlanding = () => {
     );
 
     // Get the data
-    // Send a message to your background script
-    window.postMessage({ type: "GET_USER_DATA_FOR_PAYMENT" }, "*");
+    const userdata = await axios.get(
+      "https://aipoool-socialscribe-backend.onrender.com/get-user-data",
+      { withCredentials: true }
+    );
 
-    // Listen for messages from your background script
-    window.addEventListener("message", function (event) {
-      // Only accept messages from the same frame
-      if (event.source !== window) {
-        return;
-      }
-
-      var message = event.data;
-
-      // Only accept messages that we know are ours
-      if (typeof message !== "object" || message === null || !message.type) {
-        return;
-      }
-
-      if (message.type === "USER_DATA_FOR_PAYMENT") {
-        console.log("Data received from background script: " + message.data);
-        // Now you can use message.data in your payment procedures
-      }
-    });
+    console.log(userdata); 
 
     let planPay, price;
     if (planType === "free") {

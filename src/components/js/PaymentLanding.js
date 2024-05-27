@@ -13,7 +13,7 @@ const PaymentLanding = () => {
         "https://aipoool-socialscribe-backend.onrender.com/get-user-data",
         { withCredentials: true }
       );
-      if (response.status === 200 && response.status === 302) {
+      if (response.status === 200 || response.status === 302) {
         setUserdata(response.data.user);
       }
     } catch (error) {

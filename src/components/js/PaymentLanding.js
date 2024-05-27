@@ -14,7 +14,8 @@ const PaymentLanding = () => {
         { withCredentials: true }
       );
       if (response.status === 200 || response.status === 302) {
-        setUserdata(response.data.user);
+        console.log(response.user); 
+        //setUserdata(response.data.user);
       }
     } catch (error) {
       if (error.response && error.response.status === 401) {
@@ -34,8 +35,7 @@ const PaymentLanding = () => {
       "pk_test_51NkpdNSGYG2CnOjscEUK9B0JfqNSzZEqj1GXLZEHPJrzCGPfTDv2DnleEid0HVNvmlf0qUVjNFTRV3UzpAsucioU00Kthd5o4Z"
     );
 
-    // Get the data
-    console.log(userdata); 
+
 
     let planPay, price;
     if (planType === "free") {

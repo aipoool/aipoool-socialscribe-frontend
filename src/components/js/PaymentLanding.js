@@ -38,19 +38,22 @@ const PaymentLanding = () => {
 
 
 
-    let planPay, price;
+    let sPriceId, sProductId;
     if (planType === "free") {
       console.log("Processing free plan");
       // Add your logic for processing free plan
     } else if (planType === "premium") {
+
       console.log("Processing premium plan");
-      planPay = "SocialScribe Premium Plan";
-      price = 1;
+      sPriceId = 'price_1PKzSsSGYG2CnOjsDpM6cUau';
+      sProductId = 'prod_QBMBmxVrYZ26Hp';
+
+      // planPay = "SocialScribe Premium Plan";
+      // price = 1;
     } else if (planType === "pro") {
       console.log("Processing pro plan");
-
-      planPay = "SocialScribe Pro Plan";
-      price = 2;
+      sPriceId = 'price_1PKzTSSGYG2CnOjs0iTitDDU';
+      sProductId = 'prod_QBMBqKnsx3xsxg';
     } else {
       console.log("Invalid plan");
     }
@@ -60,11 +63,11 @@ const PaymentLanding = () => {
       "http://localhost:1997/api/create-checkout-session",
       {
         data: {
-          plan: planPay,
+          priceId: sPriceId,
+          productId: sProductId,
           type: planType,
-          price: price,
           userEmail: userdata.email,
-          userId: userdata._id,
+          userMongoId: userdata._id,
         },
       },
       { withCredentials: true }

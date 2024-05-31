@@ -38,7 +38,7 @@ const PaymentLanding = () => {
     fetchData();
   }, []);
 
-  async function makePayment(planType) {
+  async function makePayment(planType, isMonthly) {
     const stripe = await loadStripe(
       "pk_test_51NkpdNSGYG2CnOjscEUK9B0JfqNSzZEqj1GXLZEHPJrzCGPfTDv2DnleEid0HVNvmlf0qUVjNFTRV3UzpAsucioU00Kthd5o4Z"
     );
@@ -49,14 +49,26 @@ const PaymentLanding = () => {
       // Add your logic for processing free plan
     } else if (planType === "premium") {
       console.log("Processing premium plan");
-      sPriceId = "price_1PKzSsSGYG2CnOjsDpM6cUau";
+      if(isMonthly){
+        sPriceId = "price_1PKzSsSGYG2CnOjsDpM6cUau";
+      }
+      else {
+        sPriceId = "price_1PMU4ASGYG2CnOjs6jriPfOa";
+      }
+      
       sProductId = "prod_QBMBmxVrYZ26Hp";
 
       // planPay = "SocialScribe Premium Plan";
       // price = 1;
     } else if (planType === "pro") {
       console.log("Processing pro plan");
-      sPriceId = "price_1PKzTSSGYG2CnOjs0iTitDDU";
+
+      if(isMonthly){
+        sPriceId = "price_1PKzTSSGYG2CnOjs0iTitDDU";
+      }else{
+        sPriceId = "price_1PMUSxSGYG2CnOjsYYFNnMmL";
+      }
+      
       sProductId = "prod_QBMBqKnsx3xsxg";
     } else {
       console.log("Invalid plan");

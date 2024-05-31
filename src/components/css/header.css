@@ -195,7 +195,7 @@ html {
 
 @media all{ 
   .main-header-bar { 
-    background-color: #fff; 
+    background-color: transparent;
     border-bottom-color: var(--ast-border-color); 
     border-bottom-style: solid;
   } 
@@ -224,7 +224,8 @@ html {
 }     
 
 .ast-primary-header-bar { 
-    background-color: #ffffff; 
+  background-color: transparent; /* Make the background transparent */
+
     background-image: none;
 } 
 
@@ -640,60 +641,21 @@ a:hover {
     line-height: 92px;
 } 
 
-@media all{ 
-  .main-header-menu .menu-link  { 
-    text-decoration: none; 
-    padding: 0 1em; 
-    display: inline-block; 
-    transition: all .2s linear;
-  } 
-}     
-
-.ast-builder-menu-1 .menu-item > .menu-link  { 
-    padding-left: 24px; 
-    padding-right: 24px;
-} 
-
-.main-header-menu > .menu-item > .menu-link  { 
-    height: 100%; 
-    -webkit-box-align: center; 
-    -webkit-align-items: center; 
-    -moz-box-align: center; 
-    -ms-flex-align: center; 
-    align-items: center; 
-    -js-display: flex; 
-    display: flex;
-} 
-
-@media (min-width: 922px){ 
-  .ast-builder-menu .main-navigation > ul > li:last-child a  { 
-    margin-right: 0;
-  } 
-}     
-
-.ast-builder-menu .main-header-menu .menu-link ,[class*="ast-builder-menu-"] .main-header-menu .menu-item > .menu-link ,.main-header-menu .menu-link  { 
-    color: var(--ast-global-color-2);
-} 
-
-.ast-theme-transparent-header .ast-builder-menu .main-header-menu .menu-item:hover > .menu-link, .ast-theme-transparent-header .main-header-menu .menu-item:hover > .menu-link { 
-    color: var(--ast-global-color-1);
-} 
-
 
 /* These were inline style tags. Uses id+class to override almost everything */
-#style-JVdHf.style-JVdHf {  
+#style-BSyRU.style-BSyRU {  
    --color: #557dbc;  
     --background-color: transparent;  
 }  
-#style-LiCsB.style-LiCsB {  
+#style-mrKDW.style-mrKDW {  
    --color: #7acdee;  
     --background-color: transparent;  
 }  
-#style-crA5i.style-crA5i {  
+#style-J3cO7.style-J3cO7 {  
    --color: #8a3ab9;  
     --background-color: transparent;  
 }  
-#style-ILl5Y.style-ILl5Y {  
+#style-Rjf2G.style-Rjf2G {  
    --color: #1c86c6;  
     --background-color: transparent;  
 }  

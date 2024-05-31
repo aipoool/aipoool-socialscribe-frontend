@@ -96,23 +96,16 @@ const Login = () => {
                         Click here
                       </a>
                     </p>
+                    <nav class="login-card-footer-nav">
+                        <a href="https://aipoool.com/terms-conditions/">Terms of use.</a>
+                        <a href="https://aipoool.com/privacy-policy/">Privacy policy</a>
+                      </nav>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            class="elementor-element elementor-element-f791ffd elementor-widget elementor-widget-spacer"
-            data-id="f791ffd"
-            data-element_type="widget"
-            data-widget_type="spacer.default"
-          >
-            <div class="elementor-widget-container">
-              <div class="elementor-spacer">
-                <div class="elementor-spacer-inner"></div>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
       <div

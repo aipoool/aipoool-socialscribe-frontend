@@ -212,11 +212,7 @@ const OpenAIKeyForm = ({ userId }) => {
               </div>
             
           </div>
-          <div
-            class="elementor-element elementor-element-3b42446 e-con-full e-flex e-con e-child"
-            data-id="3b42446"
-            data-element_type="container"
-          ></div>
+
         </div>
       </div>
       <div

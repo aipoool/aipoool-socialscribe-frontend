@@ -6,6 +6,10 @@ import { loadStripe } from "@stripe/stripe-js";
 
 const PaymentLanding = () => {
   const [userdata, setUserdata] = useState({});
+  const [isMonthly, setIsMonthly] = useState(false);
+  const toggleBilling = () => {
+    setIsMonthly(!isMonthly);
+  };
 
   const fetchData = async () => {
     try {
@@ -93,75 +97,117 @@ const PaymentLanding = () => {
   return (
     <>
       <div
-        class="elementor-element elementor-element-9e0036e e-flex e-con-boxed e-con e-parent e-lazyloaded snipcss-97bdC"
+        class="elementor-element elementor-element-9e0036e e-flex e-con-boxed e-con e-parent e-lazyloaded snipcss-x3KAs"
         data-id="9e0036e"
         data-element_type="container"
         data-settings='{"background_background":"classic"}'
       >
-        <div class="containercard snipcss-iaZTI">
-          <h5 class="text-center pricing-table-subtitle">PRICING PLAN</h5>
-          <h1 class="text-center pricing-table-title">Pricing Table</h1>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card pricing-card pricing-plan-basic">
-                <div class="card-body">
-                  <i class="mdi mdi-cube-outline pricing-plan-icon"></i>
-                  <p class="pricing-plan-title">Basic</p>
-                  <h3 class="pricing-plan-cost ml-auto">FREE</h3>
-                  <ul class="pricing-plan-features">
-                    <li>Unlimited conferences</li>
-                    <li>100 participants max</li>
-                    <li>Custom Hold Music</li>
-                    <li>10 participants max</li>
-                  </ul>
-                  <button
-                    class="btn pricing-plan-purchase-btn"
-                    onClick={() => makePayment("free")}
-                  >
-                    Free
-                  </button>
+        <div class="e-con-inner">
+          <div
+            class="elementor-element elementor-element-ed79abc e-con-full e-flex e-con e-child"
+            data-id="ed79abc"
+            data-element_type="container"
+          >
+            <div
+              class="elementor-element elementor-element-3b42446 e-con-full e-flex e-con e-child"
+              data-id="3b42446"
+              data-element_type="container"
+            >
+              <div
+                class="elementor-element elementor-element-9439560 e-con-full e-flex e-con e-child"
+                data-id="9439560"
+                data-element_type="container"
+              >
+                <div
+                  class="elementor-element elementor-element-3e93d52 elementor-widget elementor-widget-heading"
+                  data-id="3e93d52"
+                  data-element_type="widget"
+                  data-widget_type="heading.default"
+                >
+                  <div class="elementor-widget-container"></div>
                 </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card pricing-card pricing-card-highlighted  pricing-plan-pro">
-                <div class="card-body">
-                  <i class="mdi mdi-trophy pricing-plan-icon"></i>
-                  <p class="pricing-plan-title">Pro</p>
-                  <h3 class="pricing-plan-cost ml-auto">$49</h3>
-                  <ul class="pricing-plan-features">
-                    <li>Unlimited conferences</li>
-                    <li>100 participants max</li>
-                    <li>Custom Hold Music</li>
-                    <li>10 participants max</li>
-                  </ul>
-                  <button
-                    class="btn pricing-plan-purchase-btn"
-                    onClick={() => makePayment("premium")}
-                  >
-                    Premium
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card pricing-card pricing-plan-enterprise">
-                <div class="card-body">
-                  <i class="mdi mdi-wallet-giftcard pricing-plan-icon"></i>
-                  <p class="pricing-plan-title">Enterprise</p>
-                  <h3 class="pricing-plan-cost ml-auto">$69</h3>
-                  <ul class="pricing-plan-features">
-                    <li>Unlimited conferences</li>
-                    <li>100 participants max</li>
-                    <li>Custom Hold Music</li>
-                    <li>10 participants max</li>
-                  </ul>
-                  <button
-                    class="btn pricing-plan-purchase-btn"
-                    onClick={() => makePayment("pro")}
-                  >
-                    Pro
-                  </button>
+                <div
+                  class="elementor-element elementor-element-50f89ff elementor-widget elementor-widget-image-carousel e-widget-swiper"
+                  data-id="50f89ff"
+                  data-element_type="widget"
+                  data-settings='{"slides_to_show":"2","slides_to_scroll":"1","navigation":"none","slides_to_show_tablet":"4","slides_to_show_mobile":"2","image_spacing_custom":{"unit":"px","size":66,"sizes":[]},"autoplay_speed":8000,"speed":1000,"autoplay":"yes","pause_on_hover":"yes","pause_on_interaction":"yes","infinite":"yes","image_spacing_custom_tablet":{"unit":"px","size":"","sizes":[]},"image_spacing_custom_mobile":{"unit":"px","size":"","sizes":[]}}'
+                  data-widget_type="image-carousel.default"
+                  aria-roledescription="carousel"
+                  aria-label="Carousel | Horizontal scrolling: Arrow Left &amp; Right"
+                >
+                  <div class="elementor-widget-container">
+                    <header>
+                      <h1>Our Pricing</h1>
+                      <div class="toggle">
+                        <label>Annually </label>
+                        <div class="toggle-btn">
+                          <input
+                            type="checkbox"
+                            class="checkbox"
+                            id="checkbox"
+                            checked={isMonthly}
+                            onChange={toggleBilling}
+                          />
+                          <label class="sub" id="sub" for="checkbox">
+                            <div class="circle"></div>
+                          </label>
+                        </div>
+                        <label> Monthly</label>
+                      </div>
+                    </header>
+                    <div class="cards">
+                      <div class="card shadow">
+                        <ul>
+                          <li class="pack">FREE</li>
+                          <li id="basic" class="price bottom-bar">
+                            {isMonthly ? "$19.99" : "$199.99"}
+                          </li>
+                          <li class="bottom-bar">500 GB Storage</li>
+                          <li class="bottom-bar">2 Users Allowed</li>
+                          <li class="bottom-bar">Send up to 3 GB</li>
+                          <li>
+                            <button class="payment-btn">Get Affiliate Program</button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card active">
+                        <ul>
+                          <li class="pack">PREMIUM</li>
+                          <li id="professional" class="price bottom-bar">
+                            {isMonthly ? "$24.99" : "$249.99"}
+                          </li>
+                          <li class="bottom-bar">1 TB Storage</li>
+                          <li class="bottom-bar">5 Users Allowed</li>
+                          <li class="bottom-bar">Send up to 10 GB</li>
+                          <li>
+                            <button 
+                            class="payment-btn payment-active-btn"
+                            onClick={() => makePayment("premium" , isMonthly)}>
+                              Get Premium
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card shadow">
+                        <ul>
+                          <li class="pack">PROFESSIONAL</li>
+                          <li id="master" class="price bottom-bar">
+                            {isMonthly ? "$39.99" : "$399.99"}
+                          </li>
+                          <li class="bottom-bar">2 TB Storage</li>
+                          <li class="bottom-bar">10 Users Allowed</li>
+                          <li class="bottom-bar">Send up to 20 GB</li>
+                          <li>
+                            <button 
+                            class="payment-btn"
+                            onClick={() => makePayment("pro" , isMonthly)}>
+                              Get Pro
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

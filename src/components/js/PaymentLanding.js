@@ -97,7 +97,8 @@ const PaymentLanding = () => {
         data-element_type="container"
         data-settings='{"background_background":"classic"}'
       >
-        <div class="e-con-inner"></div>
+        <div class="e-con-inner">
+          
         <header>
           <h1>Our Pricing</h1>
           <div class="toggle">
@@ -154,6 +155,7 @@ const PaymentLanding = () => {
               </li>
             </ul>
           </div>
+        </div>
         </div>
       </div>
       <div className="footer">

@@ -97,7 +97,7 @@ const PaymentLanding = () => {
         data-element_type="container"
         data-settings='{"background_background":"classic"}'
       >
-        <div class="e-con-inner">
+
           
         <header>
           <h1>Our Pricing</h1>
@@ -157,7 +157,7 @@ const PaymentLanding = () => {
           </div>
         </div>
         </div>
-      </div>
+
       <div className="footer">
         <div
           class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-3-cheavy ast-builder-grid-row-tablet-3-equal ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack snipcss-YE11r"

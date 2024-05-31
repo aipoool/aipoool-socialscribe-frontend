@@ -144,6 +144,10 @@ html {
 } 
 
 :root { 
+    --e-global-color-astglobalcolor4: #E7F6FF; 
+} 
+
+:root { 
     --wh-primary-500: hsl(161, 100%, 35%); 
     --wh-secondary-50: hsl(218, 22%, 30%); 
     --wh-secondary-100: hsl(218, 22%, 27%); 
@@ -314,6 +318,10 @@ html {
     flex-wrap: nowrap;
   } 
 
+  .ast-grid-right-section { 
+    justify-content: flex-end;
+  } 
+
   .ast-builder-layout-element { 
     align-items: center;
   } 
@@ -335,6 +343,25 @@ html {
   .site-header-section > div:last-child  { 
     padding-right: 0;
   } 
+}     
+
+.ast-builder-layout-element[data-section="section-hb-social-icons-1"] { 
+    display: flex;
+} 
+
+.ast-builder-menu-1 { 
+    font-family: inherit; 
+    font-weight: 500;
+} 
+
+.ast-builder-menu-1 { 
+    display: flex;
+} 
+
+@media all{ 
+  .site-header-section .ast-builder-menu  { 
+    align-items: center;
+  } 
 
   .site-branding { 
     line-height: 1; 
@@ -353,6 +380,14 @@ html {
     align-items: center; 
     transition: all .2s linear;
   } 
+
+  .ast-main-header-bar-alignment  { 
+    margin-left: auto;
+  } 
+
+  .site-header-section .ast-main-header-bar-alignment  { 
+    height: 100%;
+  } 
 }     
 
 .site-logo-img  { 
@@ -360,6 +395,10 @@ html {
 } 
 
 @media all{ 
+  .main-header-bar-navigation  { 
+    height: 100%;
+  } 
+
   a { 
     background-color: transparent;
   } 
@@ -408,6 +447,66 @@ a:hover {
 } 
 
 @media all{ 
+  .ast-builder-social-element { 
+    line-height: 1; 
+    color: #3a3a3a; 
+    background: 0 0; 
+    vertical-align: middle; 
+    transition: all 10ms; 
+    margin-left: 6px; 
+    margin-right: 6px; 
+    justify-content: center; 
+    align-items: center;
+  } 
+
+  .ast-inline-flex { 
+    -js-display: inline-flex; 
+    display: inline-flex; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    align-content: center;
+  } 
+}     
+
+.ast-builder-social-element { 
+    line-height: 1; 
+    color: #3a3a3a; 
+    background: transparent; 
+    vertical-align: middle; 
+    transition: all 0.01s; 
+    margin-left: 6px; 
+    margin-right: 6px; 
+    justify-content: center; 
+    align-items: center;
+} 
+
+.ast-header-social-wrap .ast-builder-social-element:first-child  { 
+    margin-left: 0;
+} 
+
+@media all{ 
+  .ast-builder-social-element:hover { 
+    color: #0274be;
+  } 
+}     
+
+.ast-header-social-wrap .ast-builder-social-element:last-child  { 
+    margin-right: 0;
+} 
+
+@media all{ 
+  nav { 
+    display: block;
+  } 
+
+  .site-navigation { 
+    height: 100%;
+  } 
+
+  .ast-flex-grow-1 { 
+    flex-grow: 1;
+  } 
+
   img { 
     border: 0;
   } 
@@ -434,4 +533,167 @@ a:hover {
     max-width: 160px;
 } 
 
+@media all{ 
+  .ahfb-svg-iconset { 
+    -js-display: inline-flex; 
+    display: inline-flex; 
+    align-self: center;
+  } 
 
+  .main-navigation { 
+    height: 100%; 
+    -js-display: inline-flex; 
+    display: inline-flex;
+  } 
+
+  .ast-builder-menu .main-navigation  { 
+    padding: 0;
+  } 
+
+  svg:not(:root) { 
+    overflow: hidden;
+  } 
+
+  .ahfb-svg-iconset svg  { 
+    width: 17px; 
+    height: 17px; 
+    transition: none;
+  } 
+}     
+
+.ast-header-social-1-wrap .ast-builder-social-element svg  { 
+    width: 18px; 
+    height: 18px;
+} 
+
+@media all{ 
+  ul { 
+    border: 0; 
+    font-size: 100%; 
+    font-style: inherit; 
+    font-weight: inherit; 
+    margin: 0; 
+    outline: 0; 
+    padding: 0; 
+    vertical-align: baseline;
+  } 
+
+  ul { 
+    margin: 0 0 1.5em 3em;
+  } 
+
+  ul { 
+    list-style: disc;
+  } 
+
+  .main-navigation ul  { 
+    list-style: none; 
+    margin: 0; 
+    padding-left: 0; 
+    position: relative;
+  } 
+
+  .ast-builder-menu .main-navigation > ul  { 
+    align-self: center;
+  } 
+}     
+
+.ast-builder-menu .main-header-menu  { 
+    color: var(--ast-global-color-2);
+} 
+
+@media all{ 
+  li { 
+    border: 0; 
+    font-size: 100%; 
+    font-style: inherit; 
+    font-weight: inherit; 
+    margin: 0; 
+    outline: 0; 
+    padding: 0; 
+    vertical-align: baseline;
+  } 
+
+  .main-header-menu .menu-item  { 
+    position: relative;
+  } 
+}     
+
+.main-header-menu .menu-item  { 
+    -js-display: flex; 
+    display: flex; 
+    -webkit-box-pack: center; 
+    -webkit-justify-content: center; 
+    -moz-box-pack: center; 
+    -ms-flex-pack: center; 
+    justify-content: center; 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+    -webkit-flex-direction: column; 
+    -moz-box-orient: vertical; 
+    -moz-box-direction: normal; 
+    -ms-flex-direction: column; 
+    flex-direction: column;
+} 
+
+.ast-primary-header-bar .main-header-menu > .menu-item  { 
+    line-height: 92px;
+} 
+
+@media all{ 
+  .main-header-menu .menu-link  { 
+    text-decoration: none; 
+    padding: 0 1em; 
+    display: inline-block; 
+    transition: all .2s linear;
+  } 
+}     
+
+.ast-builder-menu-1 .menu-item > .menu-link  { 
+    padding-left: 24px; 
+    padding-right: 24px;
+} 
+
+.main-header-menu > .menu-item > .menu-link  { 
+    height: 100%; 
+    -webkit-box-align: center; 
+    -webkit-align-items: center; 
+    -moz-box-align: center; 
+    -ms-flex-align: center; 
+    align-items: center; 
+    -js-display: flex; 
+    display: flex;
+} 
+
+@media (min-width: 922px){ 
+  .ast-builder-menu .main-navigation > ul > li:last-child a  { 
+    margin-right: 0;
+  } 
+}     
+
+.ast-builder-menu .main-header-menu .menu-link ,[class*="ast-builder-menu-"] .main-header-menu .menu-item > .menu-link ,.main-header-menu .menu-link  { 
+    color: var(--ast-global-color-2);
+} 
+
+.ast-theme-transparent-header .ast-builder-menu .main-header-menu .menu-item:hover > .menu-link, .ast-theme-transparent-header .main-header-menu .menu-item:hover > .menu-link { 
+    color: var(--ast-global-color-1);
+} 
+
+
+/* These were inline style tags. Uses id+class to override almost everything */
+#style-JVdHf.style-JVdHf {  
+   --color: #557dbc;  
+    --background-color: transparent;  
+}  
+#style-LiCsB.style-LiCsB {  
+   --color: #7acdee;  
+    --background-color: transparent;  
+}  
+#style-crA5i.style-crA5i {  
+   --color: #8a3ab9;  
+    --background-color: transparent;  
+}  
+#style-ILl5Y.style-ILl5Y {  
+   --color: #1c86c6;  
+    --background-color: transparent;  
+}  

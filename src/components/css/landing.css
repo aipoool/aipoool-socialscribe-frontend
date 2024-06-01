@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800,300i,400i,500i,600i,700i,800i&display=swap'); 
 @import url('https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css');
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800);
 @media all{     
   body {  
     font-size:100%;
@@ -632,7 +633,7 @@ a:hover {
 
 /** CARDS CSS ****************************************/ 
 
-@import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800);
+
 .pricing3 {
   font-family: "Montserrat", sans-serif;
 	color: #8d97ad;

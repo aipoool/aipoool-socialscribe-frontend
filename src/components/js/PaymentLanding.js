@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import "../css/landing.css";
 import axios from "axios";
 import { loadStripe } from "@stripe/stripe-js";
+import { Helmet } from "react-helmet";
 
 const PaymentLanding = () => {
   const [userdata, setUserdata] = useState({});
@@ -97,66 +98,239 @@ const PaymentLanding = () => {
         data-element_type="container"
         data-settings='{"background_background":"classic"}'
       >
+        <div class="pricing3 py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-2 col-md-3 align-self-center">
+                <div class="nav flex-column nav-pills" role="tablist">
+                  <a
+                    class="nav-link "
+                    data-toggle="pill"
+                    href="#p3-1"
+                    role="tab"
+                    aria-expanded="true"
+                  >
+                    <h2>$0</h2>
+                    <h6 class="subtitle">Free</h6>
+                  </a>
+                  <a
+                    class="nav-link active"
+                    data-toggle="pill"
+                    href="#p3-2"
+                    role="tab"
+                    aria-expanded="true"
+                  >
+                    <h2>
+                      $1<small>/m</small>
+                    </h2>
+                    <h6 class="subtitle">Premium</h6>
+                  </a>
+                  <a
+                    class="nav-link"
+                    data-toggle="pill"
+                    href="#p3-3"
+                    role="tab"
+                    aria-expanded="true"
+                  >
+                    <h2>
+                      $2<small>/m</small>
+                    </h2>
+                    <h6 class="subtitle">Pro</h6>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-10 col-md-9">
+                <div class="tab-content">
+                  <div class="tab-pane fade" id="p3-1" role="tabpanel">
+                    <div class="row">
+                      <div class="col-lg-7">
+                        <div class="pricing-box">
+                          <h2 class="text-uppercase title mb-0">Free</h2>
+                          <h6 class="subtitle">The base montly plan</h6>
+                          <ul class="list-inline">
+                            <li>
+                              <i class="text-center overflow-hidden d-inline-block icon-picture"></i>{" "}
+                              <span>
+                                1 Premium images <br />
+                                Per day
+                              </span>
+                            </li>
+                            <li>
+                              <i class="text-center overflow-hidden d-inline-block icon-camrecorder"></i>{" "}
+                              <span>
+                                1 Premium Videos <br />
+                                Per day
+                              </span>
+                            </li>
+                            <li>
+                              <i class="text-center overflow-hidden d-inline-block icon-people"></i>{" "}
+                              <span>
+                                Not operate the <br />
+                                Account
+                              </span>
+                            </li>
+                            <li>
+                              <i class="text-center overflow-hidden d-inline-block icon-people"></i>{" "}
+                              <span>
+                                Not operate the <br />
+                                Account
+                              </span>
+                            </li>
+                          </ul>
+                          <div class="d-flex align-items-center">
+                            <span class="display-5 text-dark mr-3 vm font-weight-medium">
+                              $0
+                            </span>
+                            <a
+                              class="btn btn-danger-gradiant btn-md border-0 text-white rounded-pill"
+                              href="#f1"
+                            >
+                              <span>
+                                BUY NOW <i class="ti-arrow-right"></i>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
 
-          
-        <header>
-          <h1>Our Pricing</h1>
-          <div class="toggle">
-            <label>Annually </label>
-            <div class="toggle-btn">
-              <input type="checkbox" class="checkbox" id="checkbox" />
-              <label class="sub" id="sub" for="checkbox">
-                <div class="circle"></div>
-              </label>
+                      <div
+                        class="col-lg-5 bg-image text-center align-items-end position-relative d-flex"
+                        style="background-image:url(https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/pricing/bg.jpg)"
+                      >
+                        <div class="quote-box">
+                          <h3 class="text-white font-weight-light mb-4">
+                            I am using this plan for last two years and i am
+                            very much impressed with the quality ...
+                          </h3>
+                          <h6 class="text-white">Hanna Gover</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade active show"
+                    id="p3-2"
+                    role="tabpanel"
+                  >
+                    <div class="row">
+                      <div class="col-lg-7">
+                        <div class="pricing-box">
+                          <h2 class="text-uppercase title mb-0">Regular</h2>
+                          <h6 class="subtitle">The base montly plan</h6>
+                          <ul class="list-inline">
+                            <li>
+                              <i class="text-center overflow-hidden d-inline-block icon-picture"></i>{" "}
+                              <span>
+                                10 Premium images <br />
+                                Per day
+                              </span>
+                            </li>
+                            <li>
+                              <i class="text-center overflow-hidden d-inline-block icon-camrecorder"></i>{" "}
+                              <span>
+                                10 Premium Videos <br />
+                                Per day
+                              </span>
+                            </li>
+                            <li>
+                              <i class="text-center overflow-hidden d-inline-block icon-people"></i>{" "}
+                              <span>
+                                Users can operate the <br />
+                                Account
+                              </span>
+                            </li>
+                          </ul>
+                          <div class="d-flex align-items-center">
+                            <span class="display-5 text-dark mr-3 vm font-weight-medium">
+                              $5
+                            </span>
+                            <a
+                              class="btn btn-danger-gradiant btn-md border-0 text-white rounded-pill"
+                              href="#f1"
+                            >
+                              <span>BUY NOW</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="col-lg-5 bg-image text-center align-items-end position-relative d-flex"
+                        style="background-image:url(https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/pricing/bg.jpg)"
+                      >
+                        <div class="quote-box">
+                          <h3 class="text-white font-weight-light mb-4">
+                            I am using this plan for last two years and i am
+                            very much impressed with the quality ...
+                          </h3>
+                          <h6 class="text-white">Hanna Gover</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="p3-3" role="tabpanel">
+                    <div class="row">
+                      <div class="col-lg-7">
+                        <div class="pricing-box">
+                          <h2 class="text-uppercase title m-b-0">Premium</h2>
+                          <h6 class="subtitle">The base montly plan</h6>
+                          <ul class="list-inline">
+                            <li>
+                              <i class="text-center overflow-hidden d-inline-block icon-picture"></i>{" "}
+                              <span>
+                                50 Premium images <br />
+                                Per day
+                              </span>
+                            </li>
+                            <li>
+                              <i class="text-center overflow-hidden d-inline-block icon-camrecorder"></i>{" "}
+                              <span>
+                                50 Premium Videos <br />
+                                Per day
+                              </span>
+                            </li>
+                            <li>
+                              <i class="text-center overflow-hidden d-inline-block icon-people"></i>{" "}
+                              <span>
+                                Users can operate the <br />
+                                Account
+                              </span>
+                            </li>
+                          </ul>
+                          <div class="d-flex align-items-center">
+                            <span class="display-5 text-dark mr-3 font-weight-medium">
+                              $10
+                            </span>
+                            <a
+                              class="btn btn-danger-gradiant btn-md border-0 text-white rounded-pill"
+                              href="#f1"
+                            >
+                              <span>BUY NOW</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="col-lg-5 bg-image text-center align-items-end position-relative d-flex"
+                        style="background-image:url(https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/pricing/bg.jpg)"
+                      >
+                        <div class="quote-box">
+                          <h3 class="text-white font-weight-light mb-4">
+                            I am using this plan for last two years and i am
+                            very much impressed with the quality ...
+                          </h3>
+                          <h6 class="text-white">Hanna Gover</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <label> Monthly</label>
-          </div>
-        </header>
-        <div class="cards">
-          <div class="card shadow">
-            <ul>
-              <li class="pack">Basic</li>
-              <li id="basic" class="price bottom-bar">
-                &dollar;199.99
-              </li>
-              <li class="bottom-bar">500 GB Storage</li>
-              <li class="bottom-bar">2 Users Allowed</li>
-              <li class="bottom-bar">Send up to 3 GB</li>
-              <li>
-                <button class="btn">Learn More</button>
-              </li>
-            </ul>
-          </div>
-          <div class="card active">
-            <ul>
-              <li class="pack">Professional</li>
-              <li id="professional" class="price bottom-bar">
-                &dollar;249.99
-              </li>
-              <li class="bottom-bar">1 TB Storage</li>
-              <li class="bottom-bar">5 Users Allowed</li>
-              <li class="bottom-bar">Send up to 10 GB</li>
-              <li>
-                <button class="btn active-btn">Learn More</button>
-              </li>
-            </ul>
-          </div>
-          <div class="card shadow">
-            <ul>
-              <li class="pack">Master</li>
-              <li id="master" class="price bottom-bar">
-                &dollar;399.99
-              </li>
-              <li class="bottom-bar">2 TB Storage</li>
-              <li class="bottom-bar">10 Users Allowed</li>
-              <li class="bottom-bar">Send up to 20 GB</li>
-              <li>
-                <button class="btn">Learn More</button>
-              </li>
-            </ul>
           </div>
         </div>
-        </div>
+
+      </div>
 
       <div className="footer">
         <div
@@ -245,6 +419,11 @@ const PaymentLanding = () => {
           </div>
         </div>
       </div>
+      <Helmet>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+      </Helmet>
     </>
   );
 };

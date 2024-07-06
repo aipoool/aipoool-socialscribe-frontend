@@ -195,7 +195,9 @@ const PaymentLanding = () => {
 
                       <div
                         class="col-lg-5 bg-image text-center align-items-end position-relative d-flex"
-                        style="background-image:url(https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/pricing/bg.jpg)"
+                        style={{
+                          backgroundImage: `url(https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/pricing/bg.jpg)`,
+                        }}
                       >
                         <div class="quote-box">
                           <h3 class="text-white font-weight-light mb-4">
@@ -239,6 +241,14 @@ const PaymentLanding = () => {
                                 Account
                               </span>
                             </li>
+                            
+                            <li>
+                              <i class="text-center overflow-hidden d-inline-block icon-people"></i>{" "}
+                              <span>
+                                Not operate the <br />
+                                Account
+                              </span>
+                            </li>
                           </ul>
                           <div class="d-flex align-items-center">
                             <span class="display-5 text-dark mr-3 vm font-weight-medium">
@@ -256,7 +266,9 @@ const PaymentLanding = () => {
 
                       <div
                         class="col-lg-5 bg-image text-center align-items-end position-relative d-flex"
-                        style="background-image:url(https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/pricing/bg.jpg)"
+                        style={{
+                          backgroundImage: `url(https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/pricing/bg.jpg)`,
+                        }}
                       >
                         <div class="quote-box">
                           <h3 class="text-white font-weight-light mb-4">
@@ -296,6 +308,14 @@ const PaymentLanding = () => {
                                 Account
                               </span>
                             </li>
+                            
+                            <li>
+                              <i class="text-center overflow-hidden d-inline-block icon-people"></i>{" "}
+                              <span>
+                                Not operate the <br />
+                                Account
+                              </span>
+                            </li>
                           </ul>
                           <div class="d-flex align-items-center">
                             <span class="display-5 text-dark mr-3 font-weight-medium">
@@ -310,9 +330,12 @@ const PaymentLanding = () => {
                           </div>
                         </div>
                       </div>
+
                       <div
                         class="col-lg-5 bg-image text-center align-items-end position-relative d-flex"
-                        style="background-image:url(https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/pricing/bg.jpg)"
+                        style={{
+                          backgroundImage: `url(https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/pricing/bg.jpg)`,
+                        }}
                       >
                         <div class="quote-box">
                           <h3 class="text-white font-weight-light mb-4">
@@ -330,6 +353,23 @@ const PaymentLanding = () => {
           </div>
         </div>
 
+        <Helmet>
+          <script
+            src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+          ></script>
+          <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"
+          ></script>
+          <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+            integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+            crossorigin="anonymous"
+          ></script>
+        </Helmet>
       </div>
 
       <div className="footer">
@@ -419,9 +459,6 @@ const PaymentLanding = () => {
           </div>
         </div>
       </div>
-      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-
     </>
   );
 };

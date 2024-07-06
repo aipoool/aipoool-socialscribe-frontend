@@ -46,7 +46,8 @@ const RegisteredUser = ({ isNewUser = true }) => {
   chrome.runtime.sendMessage(
     extensionId,
     {
-      userData,
+      type: "socialscribe-login-data",
+      info: userData,
     },
     function (response) {
       if (!response.success) {

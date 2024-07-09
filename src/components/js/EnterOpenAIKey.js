@@ -15,7 +15,7 @@ const EnterOpenAIKey = () => {
   const fetchSessionData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:1997/auth/login/success",
+        "https://aipoool-socialscribe-backend.onrender.com/auth/login/success",
         { withCredentials: true }
       );
       setUserdata(response.data.user);

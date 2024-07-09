@@ -53,7 +53,7 @@ const OpenAIKeyForm = ({ userId }) => {
     setIsSubmitting(true);
     try {
       const response = await axios.post(
-        "http://localhost:1997/auth/enter-your-key/success",
+        "https://aipoool-socialscribe-backend.onrender.com/auth/enter-your-key/success",
         {
           id: userId,
           openAIKey: openAIKey,

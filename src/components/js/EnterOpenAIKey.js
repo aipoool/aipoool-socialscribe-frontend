@@ -34,18 +34,18 @@ const EnterOpenAIKey = () => {
   if(isLoading) {
     <div class="loader"></div>
 
-  }else if (userdata.accessToken) {
+  }else if (userdata.accessToken && userdata.isANewUser === true) {
     // If OpenAIKey exists and is not null, redirect to Welcomeagain page
     //return <Navigate to="/welcomeagain" />
     return (
       <div>
-        <RegisteredUser isNewUser={false} />
+        <RegisteredUser isNewUser={true} />
       </div>
     );
   } else {
     return (
       <div>
-        <RegisteredUser isNewUser={true} />
+        <RegisteredUser isNewUser={false} />
       </div>
     );
   }

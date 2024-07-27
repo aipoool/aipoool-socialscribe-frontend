@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/enter-your-key" element={<EnterOpenAIKey />} />
+        <Route path="/redirecting" element={<EnterOpenAIKey />} />
         <Route path="/payment-plan-options" element={<PaymentRedirect />} />
         <Route path="/registered" element={<RegisteredUser />} />
         <Route path="/success" element={<Success />} />

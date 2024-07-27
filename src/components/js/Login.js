@@ -6,7 +6,7 @@ import {AdvancedImage} from '@cloudinary/react';
 const Login = () => {
   const loginwithgoogle = () => {
     window.open(
-      "https://aipoool-socialscribe-backend.onrender.com/auth/google/callback",
+      "https://socialscribe-v1-backend.onrender.com/auth/google/callback",
       "_self"
     );
   };

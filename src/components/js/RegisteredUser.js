@@ -10,7 +10,8 @@ import { AdvancedImage } from "@cloudinary/react";
 var extensionId = "bhnpbgfnodkiohanbolcdkibeibncobf";
 
 const RegisteredUser = ({ isNewUser = true }) => {
-  const [userData, setUserdata] = useState({});
+const [userData, setUserdata] = useState({});
+const [jwtToken, setjwtToken] = useState({});
 
   // Getting the user details here so that we won't have to call it again and again
   const getUser = async () => {
@@ -20,6 +21,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
         { withCredentials: true }
       );
       setUserdata(response.data.user);
+      setjwtToken(response.data.jwtToken);
     } catch (error) {
       console.log("error", error);
     }
@@ -48,6 +50,7 @@ const RegisteredUser = ({ isNewUser = true }) => {
     {
       type: "socialscribe-login-data",
       info: userData,
+      jwtToken: jwtToken,
     },
     function (response) {
       if (!response.success) {

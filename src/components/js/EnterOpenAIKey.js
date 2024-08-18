@@ -2,15 +2,16 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import OpenAIKeyForm from "../js/OpenAIKeyForm.js";
 import "../css/enteropenaikey.css"
-import { Navigate } from "react-router-dom"; // Import Redirect from react-router-dom
+import { Navigate , useNavigate} from "react-router-dom"; // Import Redirect from react-router-dom
 import RegisteredUser from "./RegisteredUser.js";
 
 const EnterOpenAIKey = () => {
   const [userdata, setUserdata] = useState({});
   const [isLoading, setIsLoading] = useState(true); 
-  //const userEmail = userdata.email;
-  const id = userdata._id;
+  const [retryCount, setRetryCount] = useState(0);
+  const navigate = useNavigate();
 
+  const MAX_RETRIES = 3;
 
   const fetchSessionData = async () => {
     try {
@@ -23,12 +24,28 @@ const EnterOpenAIKey = () => {
       console.log("error", error);
     }
   };
-
+  
   useEffect(() => {
     fetchSessionData().then(() => {
       setIsLoading(false);
-    }, 3000);
-  }, []);
+    });
+
+    const params = new URLSearchParams(window.location.search);
+    const status = params.get("status");
+
+    if (status === "no-user-data" && retryCount < MAX_RETRIES) {
+      setRetryCount((prevCount) => prevCount + 1);
+      setTimeout(() => {
+        window.open(
+          "https://socialscribe-v1-backend.onrender.com/auth/google/callback",
+          "_self"
+        );
+      }, 1000); // 1 second delay before retrying
+    } else if (retryCount >= MAX_RETRIES) {
+      navigate("/login-failed"); // Redirect to a failure page if retries are exhausted
+    }
+  }, [retryCount, navigate]);
+
 
   // Check if userdata has OpenAIKey field and it is not null
   if(isLoading) {

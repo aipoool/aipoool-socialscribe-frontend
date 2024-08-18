@@ -8,6 +8,7 @@ import Login from "./components/js/Login";
 import PaymentRedirect from "./components/js/EnterPaymentRedirect"; 
 import EnterOpenAIKey from "./components/js/EnterOpenAIKey";
 import RegisteredUser from "./components/js/RegisteredUser";
+import LoginFailed from "./components/js/LoginFailed";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/success" element={<Success />} />
         <Route path="/cancel" element={<Cancel />} />
         <Route path="/choose-your-plan" element={<PayLanding />} />
+        <Route path="/login-failed" element={<LoginFailed />} />
       </Routes>
     </>
   );

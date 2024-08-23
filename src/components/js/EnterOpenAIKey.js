@@ -15,15 +15,37 @@ const EnterOpenAIKey = () => {
   const MAX_RETRIES = 3;
   const extensionId = "bhnpbgfnodkiohanbolcdkibeibncobf";
 
+  function decryptToken(encryptedTokenWithIv) {
+    const [ivHex, encryptedToken] = encryptedTokenWithIv.split(':');
+    const iv = Buffer.from(ivHex, 'hex');
+    const key = crypto.scryptSync("kaif123", 'salt', 32); // Derive key from password
+  
+    const decipher = crypto.createDecipheriv('aes-256-cbc', key, iv);
+  
+    let decryptedToken = decipher.update(encryptedToken, 'hex', 'utf8');
+    decryptedToken += decipher.final('utf8');
+  
+    return decryptedToken;
+  }
+
   const fetchSessionData = async () => {
-    try {
-      const response = await axios.get(
-        "https://socialscribe-v1-backend.onrender.com/auth/login/success",
-        { withCredentials: true }
-      );
-      setUserdata(response.data.user);
-    } catch (error) {
-      console.log("error", error);
+    // try {
+    //   const response = await axios.get(
+    //     "https://socialscribe-v1-backend.onrender.com/auth/login/success",
+    //     { withCredentials: true }
+    //   );
+    //   setUserdata(response.data.user);
+    // } catch (error) {
+    //   console.log("error", error);
+    // }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const encryptedTokenWithIv = urlParams.get('token');
+
+    if (encryptedTokenWithIv) {
+      const jwtToken = decryptToken(encryptedTokenWithIv);
+      console.log("Decrypted JWT Token:", jwtToken);
+      // Use the jwtToken as needed
     }
   };
   

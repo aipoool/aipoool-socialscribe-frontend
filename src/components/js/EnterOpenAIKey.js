@@ -54,6 +54,7 @@ const EnterOpenAIKey = () => {
   }else if (userdata.isANewUser === true) {
     // If OpenAIKey exists and is not null, redirect to Welcomeagain page
     //return <Navigate to="/welcomeagain" />
+    console.log("User data here from frontend code :: " , userdata);
     return (
       <div>
         <RegisteredUser isNewUser={true} />

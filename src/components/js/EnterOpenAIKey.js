@@ -1,3 +1,4 @@
+/* global chrome */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import OpenAIKeyForm from "../js/OpenAIKeyForm.js";
@@ -12,6 +13,7 @@ const EnterOpenAIKey = () => {
   const navigate = useNavigate();
 
   const MAX_RETRIES = 3;
+  const extensionId = "bhnpbgfnodkiohanbolcdkibeibncobf";
 
   const fetchSessionData = async () => {
     try {
@@ -33,17 +35,59 @@ const EnterOpenAIKey = () => {
     const params = new URLSearchParams(window.location.search);
     const status = params.get("status");
 
-    if (status === "no-user-data" && retryCount < MAX_RETRIES) {
-      setRetryCount((prevCount) => prevCount + 1);
-      setTimeout(() => {
-        window.open(
-          "https://socialscribe-v1-backend.onrender.com/auth/google/callback",
-          "_self"
-        );
-      }, 1000); // 1 second delay before retrying
-    } else if (retryCount >= MAX_RETRIES) {
-      navigate("/login-failed"); // Redirect to a failure page if retries are exhausted
+    if(status !== 'no-user-data'){
+      chrome.runtime.sendMessage(
+        extensionId,
+        {
+          type: "socialscribe-login-data",
+          info: userdata,
+        },
+        function (response) {
+          if (!response.success) {
+            console.log("error sending message", response);
+            return response;
+          }
+        }
+      );
+    }else {
+      if (retryCount < MAX_RETRIES) {
+        setRetryCount((prevCount) => prevCount + 1);
+        setTimeout(() => {
+          window.open(
+            "https://socialscribe-v1-backend.onrender.com/auth/google/callback",
+            "_self"
+          );
+        }, 1000); // 1 second delay before retrying
+      } else if (retryCount >= MAX_RETRIES) {
+        navigate("/login-failed"); // Redirect to a failure page if retries are exhausted
+      } 
     }
+
+    // if (status === "no-user-data" && retryCount < MAX_RETRIES) {
+    //   setRetryCount((prevCount) => prevCount + 1);
+    //   setTimeout(() => {
+    //     window.open(
+    //       "https://socialscribe-v1-backend.onrender.com/auth/google/callback",
+    //       "_self"
+    //     );
+    //   }, 1000); // 1 second delay before retrying
+    // } else if (retryCount >= MAX_RETRIES) {
+    //   navigate("/login-failed"); // Redirect to a failure page if retries are exhausted
+    // } else {
+    //   chrome.runtime.sendMessage(
+    //     extensionId,
+    //     {
+    //       type: "socialscribe-login-data",
+    //       info: userdata,
+    //     },
+    //     function (response) {
+    //       if (!response.success) {
+    //         console.log("error sending message", response);
+    //         return response;
+    //       }
+    //     }
+    //   );
+    // }
   }, [retryCount, navigate]);
 
 

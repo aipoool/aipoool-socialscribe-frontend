@@ -45,20 +45,20 @@ const [jwtToken, setjwtToken] = useState({});
     getUser();
   }, []);
 
-  chrome.runtime.sendMessage(
-    extensionId,
-    {
-      type: "socialscribe-login-data",
-      info: userData,
-      jwtToken: jwtToken,
-    },
-    function (response) {
-      if (!response.success) {
-        console.log("error sending message", response);
-        return response;
-      }
-    }
-  );
+  // chrome.runtime.sendMessage(
+  //   extensionId,
+  //   {
+  //     type: "socialscribe-login-data",
+  //     info: userData,
+  //     jwtToken: jwtToken,
+  //   },
+  //   function (response) {
+  //     if (!response.success) {
+  //       console.log("error sending message", response);
+  //       return response;
+  //     }
+  //   }
+  // );
 
   const heading = isNewUser
     ? "Registration Successful!"

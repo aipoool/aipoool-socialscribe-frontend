@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import OpenAIKeyForm from "../js/OpenAIKeyForm.js";
+import { Buffer } from "buffer";
 import "../css/enteropenaikey.css"
 import { Navigate , useNavigate} from "react-router-dom"; // Import Redirect from react-router-dom
 import RegisteredUser from "./RegisteredUser.js";

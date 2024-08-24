@@ -114,12 +114,13 @@ const EnterOpenAIKey = async () => {
 
     if (encryptedTokenWithIv) {
       decryptToken(encryptedTokenWithIv)
-      .then(jwtToken => {
+      .then(async jwtToken => {
         // Decode the token to get the payload data
         setUserJwtToken(jwtToken);
         const tokenData = decodeJwtToken(jwtToken);
         setUserdata(tokenData);
 
+        // message sent to the extension 
         chrome.runtime.sendMessage(
           extensionId,
           {
@@ -132,6 +133,18 @@ const EnterOpenAIKey = async () => {
               console.log("error sending message", response);
               return response;
             }
+          }
+        );
+
+        // set new user to false 
+        const response = await axios.post(
+          "https://socialscribe-v1-backend.onrender.com/api/setUserStatus",
+          { id: tokenData.id },  // Send the ID in the request body
+          {
+            headers: {
+              Authorization: `Bearer ${jwtToken}`  // Add the bearer token to the header
+            },
+            withCredentials: true
           }
         );
       })
@@ -171,18 +184,6 @@ const EnterOpenAIKey = async () => {
   }else if (userdata.isANewUser === true) {
 
     console.log("User data here from frontend code :: " , userdata);
-
-    const response = await axios.post(
-      "https://socialscribe-v1-backend.onrender.com/api/setUserStatus",
-      { id: userdata.id },  // Send the ID in the request body
-      {
-        headers: {
-          Authorization: `Bearer ${userjwtToken}`  // Add the bearer token to the header
-        },
-        withCredentials: true
-      }
-    );
-
     return (
       <div>
         <RegisteredUser isNewUser={true} />

@@ -7,6 +7,7 @@ import { jwtDecode } from "jwt-decode";
 import "../css/enteropenaikey.css"
 import { Navigate , useNavigate} from "react-router-dom"; // Import Redirect from react-router-dom
 import RegisteredUser from "./RegisteredUser.js";
+import "../css/loadingoverlay.css"; 
 
 const EnterOpenAIKey = () => {
   const [userdata, setUserdata] = useState({});
@@ -189,23 +190,21 @@ const EnterOpenAIKey = () => {
 
 
   // Check if userdata has OpenAIKey field and it is not null
-  if(isLoading) {
-    <div class="loader"></div>
-
-  }else if (userdata.isANewUser === true) {
-    console.log("User data here from frontend code :: " , userdata);
-    return (
-      <div>
+  return (
+    <div>
+      {isLoading && (
+        <div className="loading-overlay">
+          <div className="loading-text">Loading...</div>
+        </div>
+      )}
+      {!isLoading && userdata.isANewUser && (
         <RegisteredUser isNewUser={true} />
-      </div>
-    );
-  } else {
-    return (
-      <div>
+      )}
+      {!isLoading && !userdata.isANewUser && (
         <RegisteredUser isNewUser={false} />
-      </div>
-    );
-  }
+      )}
+    </div>
+  );
 };
 
 export default EnterOpenAIKey;

@@ -8,7 +8,7 @@ import "../css/enteropenaikey.css"
 import { Navigate , useNavigate} from "react-router-dom"; // Import Redirect from react-router-dom
 import RegisteredUser from "./RegisteredUser.js";
 
-const EnterOpenAIKey = () => {
+const EnterOpenAIKey = async () => {
   const [userdata, setUserdata] = useState({});
   const [userjwtToken, setUserJwtToken] = useState({});
   const [isLoading, setIsLoading] = useState(true); 
@@ -169,9 +169,20 @@ const EnterOpenAIKey = () => {
     <div class="loader"></div>
 
   }else if (userdata.isANewUser === true) {
-    // If OpenAIKey exists and is not null, redirect to Welcomeagain page
-    //return <Navigate to="/welcomeagain" />
+
     console.log("User data here from frontend code :: " , userdata);
+
+    const response = await axios.post(
+      "https://socialscribe-v1-backend.onrender.com/api/setUserStatus",
+      { id: userdata.id },  // Send the ID in the request body
+      {
+        headers: {
+          Authorization: `Bearer ${userjwtToken}`  // Add the bearer token to the header
+        },
+        withCredentials: true
+      }
+    );
+
     return (
       <div>
         <RegisteredUser isNewUser={true} />

@@ -7,12 +7,8 @@ import axios from "axios";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from "@cloudinary/react";
 
-var extensionId = "bhnpbgfnodkiohanbolcdkibeibncobf";
 
 const RegisteredUser = ({ isNewUser = true }) => {
-const [userData, setUserdata] = useState({});
-const [jwtToken, setjwtToken] = useState({});
-
 
   const cloud = new Cloudinary({
     cloud: {
@@ -35,8 +31,8 @@ const [jwtToken, setjwtToken] = useState({});
     : "It's great to have you back ! 🥳";
 
   const para = isNewUser
-    ? "Thank you for submitting your OpenAI key."
-    : `Welcome back, ${userData.userName}! \n You can start using the extension by going to X.com or other supported websites.`;
+    ? "Great! Welcome to the family 😊. Now you can reply to the posts using SocialScribe."
+    : `Welcome back! \n You can start using the extension by going to X.com or other supported websites.`;
   const redirectToLinkedIn = () => {
     window.location.href = "https://www.linkedin.com";
   };

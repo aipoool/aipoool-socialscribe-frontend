@@ -122,22 +122,6 @@ const EnterOpenAIKey = () => {
 
         // You can now use tokenData directly in your frontend
         console.log("Userdata decrypted from JWT Token:", tokenData);
-
-        chrome.runtime.sendMessage(
-          extensionId,
-          {
-            type: "socialscribe-login-data",
-            info: userdata,
-            jwtToken: userjwtToken,
-          },
-          function (response) {
-            if (!response.success) {
-              console.log("error sending message", response);
-              return response;
-            }
-          }
-        );
-
       })
       .catch(error => {
         console.error("Failed to decrypt token:", error);
@@ -149,6 +133,21 @@ const EnterOpenAIKey = () => {
     fetchSessionData().then(() => {
       setIsLoading(false);
     });
+
+    chrome.runtime.sendMessage(
+      extensionId,
+      {
+        type: "socialscribe-login-data",
+        info: userdata,
+        jwtToken: userjwtToken,
+      },
+      function (response) {
+        if (!response.success) {
+          console.log("error sending message", response);
+          return response;
+        }
+      }
+    );
 
     const params = new URLSearchParams(window.location.search);
     const status = params.get("status");

@@ -136,17 +136,6 @@ const EnterOpenAIKey = async () => {
           }
         );
 
-        // set new user to false 
-        const response = await axios.post(
-          "https://socialscribe-v1-backend.onrender.com/api/setUserStatus",
-          { id: tokenData.id },  // Send the ID in the request body
-          {
-            headers: {
-              Authorization: `Bearer ${jwtToken}`  // Add the bearer token to the header
-            },
-            withCredentials: true
-          }
-        );
       })
       .catch(error => {
         console.error("Failed to decrypt token:", error);
@@ -158,7 +147,6 @@ const EnterOpenAIKey = async () => {
     fetchSessionData().then(() => {
       setIsLoading(false);
     });
-
 
     const params = new URLSearchParams(window.location.search);
     const status = params.get("status");
@@ -182,8 +170,24 @@ const EnterOpenAIKey = async () => {
     <div class="loader"></div>
 
   }else if (userdata.isANewUser === true) {
-
     console.log("User data here from frontend code :: " , userdata);
+    try {
+      const response = await axios.post(
+        "https://socialscribe-v1-backend.onrender.com/api/setUserStatus",
+        { id: userdata.id },  // Send the ID in the request body
+        {
+          headers: {
+            Authorization: `Bearer ${userjwtToken}`,  // Add the JWT token as a Bearer token in the header
+          },
+          withCredentials: true
+        }
+      );
+
+      console.log("User status updated successfully:", response.data);
+    } catch (error) {
+        console.error("Error updating user status:", error);
+    }
+
     return (
       <div>
         <RegisteredUser isNewUser={true} />

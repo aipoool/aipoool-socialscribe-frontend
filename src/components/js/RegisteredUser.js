@@ -10,6 +10,7 @@ import { AdvancedImage } from "@cloudinary/react";
 
 const RegisteredUser = ({ isNewUser = true }) => {
 
+
   const cloud = new Cloudinary({
     cloud: {
       cloudName: "dcuecnxx4",

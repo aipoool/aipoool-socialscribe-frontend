@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import OpenAIKeyForm from "../js/OpenAIKeyForm.js";
 import { Buffer } from "buffer";
-import jwt_decode from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 import "../css/enteropenaikey.css"
 import { Navigate , useNavigate} from "react-router-dom"; // Import Redirect from react-router-dom
 import RegisteredUser from "./RegisteredUser.js";
@@ -99,7 +99,7 @@ const EnterOpenAIKey = () => {
 
   function decodeJwtToken(token) {
     try {
-      const decoded = jwt_decode(token);
+      const decoded = jwtDecode(token);
       console.log("Decoded JWT Token Data:", decoded);
       return decoded;
     } catch (error) {

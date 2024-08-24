@@ -13,19 +13,6 @@ const RegisteredUser = ({ isNewUser = true }) => {
 const [userData, setUserdata] = useState({});
 const [jwtToken, setjwtToken] = useState({});
 
-  // Getting the user details here so that we won't have to call it again and again
-  const getUser = async () => {
-    try {
-      const response = await axios.get(
-        "https://socialscribe-v1-backend.onrender.com/auth/login/success",
-        { withCredentials: true }
-      );
-      setUserdata(response.data.user);
-      setjwtToken(response.data.jwtToken);
-    } catch (error) {
-      console.log("error", error);
-    }
-  };
 
   const cloud = new Cloudinary({
     cloud: {
@@ -41,24 +28,7 @@ const [jwtToken, setjwtToken] = useState({});
   );
   const XImg = cloud.image("aipoool-socialscribe-frontend/X-registered");
 
-  useEffect(() => {
-    getUser();
-  }, []);
 
-  // chrome.runtime.sendMessage(
-  //   extensionId,
-  //   {
-  //     type: "socialscribe-login-data",
-  //     info: userData,
-  //     jwtToken: jwtToken,
-  //   },
-  //   function (response) {
-  //     if (!response.success) {
-  //       console.log("error sending message", response);
-  //       return response;
-  //     }
-  //   }
-  // );
 
   const heading = isNewUser
     ? "Registration Successful!"

@@ -10,6 +10,7 @@ import RegisteredUser from "./RegisteredUser.js";
 
 const EnterOpenAIKey = () => {
   const [userdata, setUserdata] = useState({});
+  const [userjwtToken, setUserJwtToken] = useState({});
   const [isLoading, setIsLoading] = useState(true); 
   const [retryCount, setRetryCount] = useState(0);
   const navigate = useNavigate();
@@ -100,7 +101,6 @@ const EnterOpenAIKey = () => {
   function decodeJwtToken(token) {
     try {
       const decoded = jwtDecode(token);
-      console.log("Decoded JWT Token Data:", decoded);
       return decoded;
     } catch (error) {
       console.error("Failed to decode JWT token:", error);
@@ -115,14 +115,28 @@ const EnterOpenAIKey = () => {
     if (encryptedTokenWithIv) {
       decryptToken(encryptedTokenWithIv)
       .then(jwtToken => {
-        console.log("Decrypted JWT Token:", jwtToken);
-        // Use the jwtToken as needed
-
-            // Decode the token to get the payload data
+        // Decode the token to get the payload data
+        setUserJwtToken(jwtToken);
         const tokenData = decodeJwtToken(jwtToken);
+        setUserdata(tokenData);
 
         // You can now use tokenData directly in your frontend
         console.log("Userdata decrypted from JWT Token:", tokenData);
+
+        chrome.runtime.sendMessage(
+          extensionId,
+          {
+            type: "socialscribe-login-data",
+            info: userdata,
+            jwtToken: userjwtToken,
+          },
+          function (response) {
+            if (!response.success) {
+              console.log("error sending message", response);
+              return response;
+            }
+          }
+        );
 
       })
       .catch(error => {
@@ -161,19 +175,6 @@ const EnterOpenAIKey = () => {
     // If OpenAIKey exists and is not null, redirect to Welcomeagain page
     //return <Navigate to="/welcomeagain" />
     console.log("User data here from frontend code :: " , userdata);
-    chrome.runtime.sendMessage(
-      extensionId,
-      {
-        type: "socialscribe-login-data",
-        info: userdata,
-      },
-      function (response) {
-        if (!response.success) {
-          console.log("error sending message", response);
-          return response;
-        }
-      }
-    );
     return (
       <div>
         <RegisteredUser isNewUser={true} />

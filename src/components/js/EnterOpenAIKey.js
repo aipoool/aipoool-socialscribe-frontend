@@ -8,7 +8,7 @@ import "../css/enteropenaikey.css"
 import { Navigate , useNavigate} from "react-router-dom"; // Import Redirect from react-router-dom
 import RegisteredUser from "./RegisteredUser.js";
 
-const EnterOpenAIKey = async () => {
+const EnterOpenAIKey = () => {
   const [userdata, setUserdata] = useState({});
   const [userjwtToken, setUserJwtToken] = useState({});
   const [isLoading, setIsLoading] = useState(true); 
@@ -164,6 +164,29 @@ const EnterOpenAIKey = async () => {
     } 
   }, [retryCount, navigate]);
 
+  useEffect(() => {
+    if (!isLoading && userdata.isANewUser) {
+      const updateUserStatus = async () => {
+        try {
+          const response = await axios.post(
+            "https://socialscribe-v1-backend.onrender.com/api/setUserStatus",
+            { id: userdata.id },
+            {
+              headers: {
+                Authorization: `Bearer ${userjwtToken}`,
+              },
+              withCredentials: true,
+            }
+          );
+          console.log("User status updated successfully:", response.data);
+        } catch (error) {
+          console.error("Error updating user status:", error);
+        }
+      };
+      updateUserStatus();
+    }
+  }, [isLoading, userdata, userjwtToken]);
+
 
   // Check if userdata has OpenAIKey field and it is not null
   if(isLoading) {
@@ -171,23 +194,6 @@ const EnterOpenAIKey = async () => {
 
   }else if (userdata.isANewUser === true) {
     console.log("User data here from frontend code :: " , userdata);
-    try {
-      const response = await axios.post(
-        "https://socialscribe-v1-backend.onrender.com/api/setUserStatus",
-        { id: userdata.id },  // Send the ID in the request body
-        {
-          headers: {
-            Authorization: `Bearer ${userjwtToken}`,  // Add the JWT token as a Bearer token in the header
-          },
-          withCredentials: true
-        }
-      );
-
-      console.log("User status updated successfully:", response.data);
-    } catch (error) {
-        console.error("Error updating user status:", error);
-    }
-
     return (
       <div>
         <RegisteredUser isNewUser={true} />

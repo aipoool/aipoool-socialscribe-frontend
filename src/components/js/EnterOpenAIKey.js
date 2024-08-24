@@ -16,17 +16,84 @@ const EnterOpenAIKey = () => {
   const MAX_RETRIES = 3;
   const extensionId = "bhnpbgfnodkiohanbolcdkibeibncobf";
 
-  function decryptToken(encryptedTokenWithIv) {
-    const [ivHex, encryptedToken] = encryptedTokenWithIv.split(':');
-    const iv = Buffer.from(ivHex, 'hex');
-    const key = crypto.scryptSync("kaif123", 'salt', 32); // Derive key from password
+  function hexStringToArrayBuffer(hexString) {
+    if (hexString.length % 2 !== 0) {
+      throw new Error("Invalid hexString");
+    }
+    const buffer = new ArrayBuffer(hexString.length / 2);
+    const view = new Uint8Array(buffer);
+    for (let i = 0; i < hexString.length; i += 2) {
+      view[i / 2] = parseInt(hexString.substr(i, 2), 16);
+    }
+    return buffer;
+  }
   
-    const decipher = crypto.createDecipheriv('aes-256-cbc', key, iv);
+  // Function to derive key material from password
+  async function getKeyMaterial(password) {
+    const enc = new TextEncoder();
+    return window.crypto.subtle.importKey(
+      "raw",
+      enc.encode(password),
+      "PBKDF2",
+      false,
+      ["deriveKey"]
+    );
+  }
   
-    let decryptedToken = decipher.update(encryptedToken, 'hex', 'utf8');
-    decryptedToken += decipher.final('utf8');
+  // Function to derive a key using PBKDF2
+  async function deriveKey(keyMaterial, salt) {
+    const enc = new TextEncoder();
+    const saltBuffer = enc.encode(salt);
+    return window.crypto.subtle.deriveKey(
+      {
+        name: "PBKDF2",
+        salt: saltBuffer,
+        iterations: 100000,
+        hash: "SHA-256",
+      },
+      keyMaterial,
+      { name: "AES-GCM", length: 256 },
+      false,
+      ["decrypt"]
+    );
+  }
   
-    return decryptedToken;
+  // Function to decrypt the token
+  async function decryptToken(encryptedTokenWithIv) {
+    const [ivHex, authTagHex, encryptedHex] = encryptedTokenWithIv.split(':');
+  
+    const iv = hexStringToArrayBuffer(ivHex);
+    const authTag = hexStringToArrayBuffer(authTagHex);
+    const encrypted = hexStringToArrayBuffer(encryptedHex);
+  
+    // Combine encrypted data and auth tag
+    const ciphertext = new Uint8Array([...new Uint8Array(encrypted), ...new Uint8Array(authTag)]);
+  
+    // Derive the key using PBKDF2
+    const password = "kaif123";
+    const salt = "salt123";
+  
+    const keyMaterial = await getKeyMaterial(password);
+    const key = await deriveKey(keyMaterial, salt);
+  
+    // Decrypt the ciphertext
+    try {
+      const decrypted = await window.crypto.subtle.decrypt(
+        {
+          name: "AES-GCM",
+          iv: iv,
+        },
+        key,
+        ciphertext
+      );
+  
+      const decoder = new TextDecoder();
+      const decryptedToken = decoder.decode(decrypted);
+      return decryptedToken;
+    } catch (e) {
+      console.error("Decryption failed", e);
+      throw new Error("Decryption failed");
+    }
   }
 
   const fetchSessionData = async () => {
@@ -44,9 +111,14 @@ const EnterOpenAIKey = () => {
     const encryptedTokenWithIv = urlParams.get('token');
 
     if (encryptedTokenWithIv) {
-      const jwtToken = decryptToken(encryptedTokenWithIv);
-      console.log("Decrypted JWT Token:", jwtToken);
-      // Use the jwtToken as needed
+      decryptToken(encryptedTokenWithIv)
+      .then(jwtToken => {
+        console.log("Decrypted JWT Token:", jwtToken);
+        // Use the jwtToken as needed
+      })
+      .catch(error => {
+        console.error("Failed to decrypt token:", error);
+      });
     }
   };
   

@@ -14,7 +14,7 @@ function LoginFailed() {
   };
 
   const handleReportIssue = () => {
-    navigate("/feedback"); // Assuming there's a feedback page to report issues
+    navigate("/feedback"); // Assuming there's a feedback page to report issues..
   };
 
   const cloud = new Cloudinary({

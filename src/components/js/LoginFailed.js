@@ -10,10 +10,7 @@ function LoginFailed() {
   const navigate = useNavigate();
 
   const handleRetry = () => {
-    window.open(
-      "https://socialscribe-aipoool.onrender.com/login",
-      "_self"
-    );
+    window.location.href = "https://socialscribe-v1-backend.onrender.com/auth/google/url";
   };
 
   const handleReportIssue = () => {
@@ -37,7 +34,7 @@ function LoginFailed() {
         <div class="box-2 d-flex flex-column h-100">
             <div>
                 <p class="mb-1 h-1">We're sorry 😔!!</p>
-                <p class="text-muted mb-2">We were unable to log you in after multiple attempts. Please try again or contact support.</p>
+                <p class="text-muted mb-2">We were unable to log you into SocialScribe. Please try again later or contact support.</p>
                 <div class="d-flex flex-column mt-3">
                     <button 
                         onClick={handleRetry} class="btn btn-primary mb-3">Retry Login</button>

@@ -5,12 +5,7 @@ import {Cloudinary} from "@cloudinary/url-gen";
 import {AdvancedImage} from '@cloudinary/react';
 const Login = () => {
   const loginwithgoogle = () => {
-    // window.open(
-    //   "https://socialscribe-v1-backend.onrender.com/auth/google/callback",
-    //   "_self"
-    // );
     window.location.href = "https://socialscribe-v1-backend.onrender.com/auth/google/url";
-
   };
 
   const cloud = new Cloudinary({

@@ -156,7 +156,7 @@ const EnterOpenAIKey = () => {
       setRetryCount((prevCount) => prevCount + 1);
       setTimeout(() => {
         window.open(
-          "https://socialscribe-v1-backend.onrender.com/auth/google/callback",
+          "https://socialscribe-v1-backend.onrender.com/auth/google/url",
           "_self"
         );
       }, 1000); // 1 second delay before retrying
